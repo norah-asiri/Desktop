@@ -30,6 +30,8 @@ class Deck {
             cards[random_index1] = cards[random_index2]
             cards[random_index2] = temp
         }
+        print("_________Card after shffle: _________")
+        print(cards)
     }
     
     
@@ -47,11 +49,13 @@ class Deck {
             }
                 
         }
+        print("_________Cards init: _________")
+        print(cards)
     }
 }
 
 class Player {
-    let name : String
+    var name : String
     var hand : Card
     var count : Int
     
@@ -77,9 +81,19 @@ class Player {
         count = 0
     }
 }
+let player1 = Player(name: "Norah")
+player1.draw()
+print(player1.hand)
+let roll = player1.rollDice()
+let matching = player1.matchingCards(color: "Red", roll: roll)
+print("Maching Cards = \(matching)")
+
+let player2 = player1
+player2.name = "test"
+print("Here player1 name \(player1.name)")
 
 
-// print(" Init \(deck.cards)")
+
 // deck.shuffle()
 // print("After shuffle \(deck.cards)")
 // deck.deal()
