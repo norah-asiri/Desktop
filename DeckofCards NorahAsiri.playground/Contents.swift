@@ -52,21 +52,38 @@ class Deck {
 
 class Player {
     let name : String
-    let hand : Card
-    func draw (deck : Deck) -> Card {
-        
+    var hand : Card
+    var count : Int
+    
+    func draw () -> Card {
+        let deck = Deck()
+        self.hand = deck.deal()
+        return hand
+    
     }
-    init (){
-        
+    
+    func rollDice () -> Int{
+        return Int.random(in: 1...6)
+    }
+    
+    func matchingCards (color : String, roll : Int) -> Int{
+     return count+1
+        }
+    
+    init (name : String){
+        self.name = name
+        print ("Hello \(name)")
+        hand = Card(color: "", roll: 0)
+        count = 0
     }
 }
 
-let deck = Deck()
-print(" Init \(deck.cards)")
-deck.shuffle()
-print("After shuffle \(deck.cards)")
-deck.deal()
-print(" After deal \(deck.cards)")
+
+// print(" Init \(deck.cards)")
+// deck.shuffle()
+// print("After shuffle \(deck.cards)")
+// deck.deal()
+// print(" After deal \(deck.cards)")
 
 
 
