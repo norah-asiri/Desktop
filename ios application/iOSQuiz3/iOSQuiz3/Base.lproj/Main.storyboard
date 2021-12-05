@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSQuiz3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sI6-Ve-CWC">
+                                <rect key="frame" x="0.0" y="80.5" width="72" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Answer"/>
+                                <connections>
+                                    <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ekM-P1-Fb0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drq-Fe-Gd5">
+                                <rect key="frame" x="360" y="80.5" width="54" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E93-j2-E54"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taj-EL-REu">
+                                <rect key="frame" x="27" y="407.5" width="360" height="81.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="kPs-HO-uLf"/>
+                                </constraints>
+                                <string key="text">Create the user interface. As we create the UI, we will get a better understanding of our application. Then we breathe life into our application.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LaWhat is the first step to iOS development?bel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfS-xU-eeV">
+                                <rect key="frame" x="0.0" y="52" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="RfS-xU-eeV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="10k-tu-muc"/>
+                            <constraint firstItem="taj-EL-REu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2lY-8s-Pwt"/>
+                            <constraint firstItem="RfS-xU-eeV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6pH-Bp-jNy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Drq-Fe-Gd5" secondAttribute="trailing" id="DVh-eO-9Rg"/>
+                            <constraint firstItem="sI6-Ve-CWC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KxB-ut-wOn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RfS-xU-eeV" secondAttribute="trailing" id="TSJ-C1-SNx"/>
+                            <constraint firstItem="taj-EL-REu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a0e-Yc-yew"/>
+                            <constraint firstItem="RfS-xU-eeV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dea-OA-d2j"/>
+                            <constraint firstItem="Drq-Fe-Gd5" firstAttribute="firstBaseline" secondItem="sI6-Ve-CWC" secondAttribute="firstBaseline" id="gWh-rU-hTV"/>
+                            <constraint firstItem="sI6-Ve-CWC" firstAttribute="top" secondItem="RfS-xU-eeV" secondAttribute="bottom" constant="8" id="m6w-nK-oBx"/>
+                            <constraint firstItem="RfS-xU-eeV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="vqf-ck-Gcp"/>
+                            <constraint firstItem="taj-EL-REu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xuk-tE-np7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="taj-EL-REu" id="ziS-O1-VxA"/>
+                        <outlet property="questionLabel" destination="RfS-xU-eeV" id="c8f-MT-mZR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
