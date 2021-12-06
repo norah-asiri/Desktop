@@ -21,8 +21,8 @@
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="I am thinking of a number between 1 and 100 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQv-qw-H00">
-                                <rect key="frame" x="35" y="108.5" width="344" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am thinking of a number between 1 and 100 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQv-qw-H00">
+                                <rect key="frame" x="61" y="108.5" width="292.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,6 +58,7 @@
                             <constraint firstItem="Pfa-LE-wvt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AGD-ra-nLi"/>
                             <constraint firstItem="NCI-g7-2YT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="NVz-lS-xao"/>
                             <constraint firstItem="UG9-aE-B1M" firstAttribute="top" secondItem="SQv-qw-H00" secondAttribute="bottom" constant="25" id="Qo3-cC-SQ6"/>
+                            <constraint firstItem="SQv-qw-H00" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WVx-Qd-ZuV"/>
                             <constraint firstItem="SQv-qw-H00" firstAttribute="top" secondItem="NCI-g7-2YT" secondAttribute="bottom" constant="35" id="YeH-jq-2Fv"/>
                             <constraint firstItem="Pfa-LE-wvt" firstAttribute="top" secondItem="ZUb-IL-yAK" secondAttribute="bottom" constant="40" id="ZS4-Xe-fI4"/>
                             <constraint firstItem="ZUb-IL-yAK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hfU-CH-v7E"/>
