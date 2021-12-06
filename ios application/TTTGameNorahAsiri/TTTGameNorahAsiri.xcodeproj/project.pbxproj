@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84DE9552275E88F9001F33F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE9551275E88F9001F33F7 /* AppDelegate.swift */; };
+		84DE9554275E88F9001F33F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE9553275E88F9001F33F7 /* SceneDelegate.swift */; };
+		84DE9556275E88F9001F33F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE9555275E88F9001F33F7 /* ViewController.swift */; };
+		84DE9559275E88F9001F33F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DE9557275E88F9001F33F7 /* Main.storyboard */; };
+		84DE955B275E88FB001F33F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DE955A275E88FB001F33F7 /* Assets.xcassets */; };
+		84DE955E275E88FB001F33F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DE955C275E88FB001F33F7 /* LaunchScreen.storyboard */; };
+		84DE9569275E88FB001F33F7 /* TTTGameNorahAsiriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE9568275E88FB001F33F7 /* TTTGameNorahAsiriTests.swift */; };
+		84DE9573275E88FB001F33F7 /* TTTGameNorahAsiriUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE9572275E88FB001F33F7 /* TTTGameNorahAsiriUITests.swift */; };
+		84DE9575275E88FB001F33F7 /* TTTGameNorahAsiriUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE9574275E88FB001F33F7 /* TTTGameNorahAsiriUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84DE9565275E88FB001F33F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DE9546275E88F8001F33F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84DE954D275E88F9001F33F7;
+			remoteInfo = TTTGameNorahAsiri;
+		};
+		84DE956F275E88FB001F33F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DE9546275E88F8001F33F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84DE954D275E88F9001F33F7;
+			remoteInfo = TTTGameNorahAsiri;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84DE954E275E88F9001F33F7 /* TTTGameNorahAsiri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTTGameNorahAsiri.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DE9551275E88F9001F33F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84DE9553275E88F9001F33F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		84DE9555275E88F9001F33F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84DE9558275E88F9001F33F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84DE955A275E88FB001F33F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84DE955D275E88FB001F33F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84DE955F275E88FB001F33F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84DE9564275E88FB001F33F7 /* TTTGameNorahAsiriTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTTGameNorahAsiriTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DE9568275E88FB001F33F7 /* TTTGameNorahAsiriTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTGameNorahAsiriTests.swift; sourceTree = "<group>"; };
+		84DE956E275E88FB001F33F7 /* TTTGameNorahAsiriUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTTGameNorahAsiriUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DE9572275E88FB001F33F7 /* TTTGameNorahAsiriUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTGameNorahAsiriUITests.swift; sourceTree = "<group>"; };
+		84DE9574275E88FB001F33F7 /* TTTGameNorahAsiriUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTGameNorahAsiriUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84DE954B275E88F9001F33F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DE9561275E88FB001F33F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DE956B275E88FB001F33F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84DE9545275E88F8001F33F7 = {
+			isa = PBXGroup;
+			children = (
+				84DE9550275E88F9001F33F7 /* TTTGameNorahAsiri */,
+				84DE9567275E88FB001F33F7 /* TTTGameNorahAsiriTests */,
+				84DE9571275E88FB001F33F7 /* TTTGameNorahAsiriUITests */,
+				84DE954F275E88F9001F33F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84DE954F275E88F9001F33F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84DE954E275E88F9001F33F7 /* TTTGameNorahAsiri.app */,
+				84DE9564275E88FB001F33F7 /* TTTGameNorahAsiriTests.xctest */,
+				84DE956E275E88FB001F33F7 /* TTTGameNorahAsiriUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84DE9550275E88F9001F33F7 /* TTTGameNorahAsiri */ = {
+			isa = PBXGroup;
+			children = (
+				84DE9551275E88F9001F33F7 /* AppDelegate.swift */,
+				84DE9553275E88F9001F33F7 /* SceneDelegate.swift */,
+				84DE9555275E88F9001F33F7 /* ViewController.swift */,
+				84DE9557275E88F9001F33F7 /* Main.storyboard */,
+				84DE955A275E88FB001F33F7 /* Assets.xcassets */,
+				84DE955C275E88FB001F33F7 /* LaunchScreen.storyboard */,
+				84DE955F275E88FB001F33F7 /* Info.plist */,
+			);
+			path = TTTGameNorahAsiri;
+			sourceTree = "<group>";
+		};
+		84DE9567275E88FB001F33F7 /* TTTGameNorahAsiriTests */ = {
+			isa = PBXGroup;
+			children = (
+				84DE9568275E88FB001F33F7 /* TTTGameNorahAsiriTests.swift */,
+			);
+			path = TTTGameNorahAsiriTests;
+			sourceTree = "<group>";
+		};
+		84DE9571275E88FB001F33F7 /* TTTGameNorahAsiriUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84DE9572275E88FB001F33F7 /* TTTGameNorahAsiriUITests.swift */,
+				84DE9574275E88FB001F33F7 /* TTTGameNorahAsiriUITestsLaunchTests.swift */,
+			);
+			path = TTTGameNorahAsiriUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84DE954D275E88F9001F33F7 /* TTTGameNorahAsiri */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DE9578275E88FB001F33F7 /* Build configuration list for PBXNativeTarget "TTTGameNorahAsiri" */;
+			buildPhases = (
+				84DE954A275E88F9001F33F7 /* Sources */,
+				84DE954B275E88F9001F33F7 /* Frameworks */,
+				84DE954C275E88F9001F33F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTTGameNorahAsiri;
+			productName = TTTGameNorahAsiri;
+			productReference = 84DE954E275E88F9001F33F7 /* TTTGameNorahAsiri.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84DE9563275E88FB001F33F7 /* TTTGameNorahAsiriTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DE957B275E88FB001F33F7 /* Build configuration list for PBXNativeTarget "TTTGameNorahAsiriTests" */;
+			buildPhases = (
+				84DE9560275E88FB001F33F7 /* Sources */,
+				84DE9561275E88FB001F33F7 /* Frameworks */,
+				84DE9562275E88FB001F33F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84DE9566275E88FB001F33F7 /* PBXTargetDependency */,
+			);
+			name = TTTGameNorahAsiriTests;
+			productName = TTTGameNorahAsiriTests;
+			productReference = 84DE9564275E88FB001F33F7 /* TTTGameNorahAsiriTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84DE956D275E88FB001F33F7 /* TTTGameNorahAsiriUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DE957E275E88FB001F33F7 /* Build configuration list for PBXNativeTarget "TTTGameNorahAsiriUITests" */;
+			buildPhases = (
+				84DE956A275E88FB001F33F7 /* Sources */,
+				84DE956B275E88FB001F33F7 /* Frameworks */,
+				84DE956C275E88FB001F33F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84DE9570275E88FB001F33F7 /* PBXTargetDependency */,
+			);
+			name = TTTGameNorahAsiriUITests;
+			productName = TTTGameNorahAsiriUITests;
+			productReference = 84DE956E275E88FB001F33F7 /* TTTGameNorahAsiriUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84DE9546275E88F8001F33F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					84DE954D275E88F9001F33F7 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					84DE9563275E88FB001F33F7 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 84DE954D275E88F9001F33F7;
+					};
+					84DE956D275E88FB001F33F7 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 84DE954D275E88F9001F33F7;
+					};
+				};
+			};
+			buildConfigurationList = 84DE9549275E88F8001F33F7 /* Build configuration list for PBXProject "TTTGameNorahAsiri" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84DE9545275E88F8001F33F7;
+			productRefGroup = 84DE954F275E88F9001F33F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84DE954D275E88F9001F33F7 /* TTTGameNorahAsiri */,
+				84DE9563275E88FB001F33F7 /* TTTGameNorahAsiriTests */,
+				84DE956D275E88FB001F33F7 /* TTTGameNorahAsiriUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84DE954C275E88F9001F33F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DE955E275E88FB001F33F7 /* LaunchScreen.storyboard in Resources */,
+				84DE955B275E88FB001F33F7 /* Assets.xcassets in Resources */,
+				84DE9559275E88F9001F33F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DE9562275E88FB001F33F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DE956C275E88FB001F33F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84DE954A275E88F9001F33F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DE9556275E88F9001F33F7 /* ViewController.swift in Sources */,
+				84DE9552275E88F9001F33F7 /* AppDelegate.swift in Sources */,
+				84DE9554275E88F9001F33F7 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DE9560275E88FB001F33F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DE9569275E88FB001F33F7 /* TTTGameNorahAsiriTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DE956A275E88FB001F33F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DE9573275E88FB001F33F7 /* TTTGameNorahAsiriUITests.swift in Sources */,
+				84DE9575275E88FB001F33F7 /* TTTGameNorahAsiriUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84DE9566275E88FB001F33F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84DE954D275E88F9001F33F7 /* TTTGameNorahAsiri */;
+			targetProxy = 84DE9565275E88FB001F33F7 /* PBXContainerItemProxy */;
+		};
+		84DE9570275E88FB001F33F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84DE954D275E88F9001F33F7 /* TTTGameNorahAsiri */;
+			targetProxy = 84DE956F275E88FB001F33F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84DE9557275E88F9001F33F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84DE9558275E88F9001F33F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84DE955C275E88FB001F33F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84DE955D275E88FB001F33F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84DE9576275E88FB001F33F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84DE9577275E88FB001F33F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84DE9579275E88FB001F33F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TTTGameNorahAsiri/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NorahAsiri.TTTGameNorahAsiri;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84DE957A275E88FB001F33F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TTTGameNorahAsiri/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NorahAsiri.TTTGameNorahAsiri;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84DE957C275E88FB001F33F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NorahAsiri.TTTGameNorahAsiriTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTTGameNorahAsiri.app/TTTGameNorahAsiri";
+			};
+			name = Debug;
+		};
+		84DE957D275E88FB001F33F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NorahAsiri.TTTGameNorahAsiriTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTTGameNorahAsiri.app/TTTGameNorahAsiri";
+			};
+			name = Release;
+		};
+		84DE957F275E88FB001F33F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NorahAsiri.TTTGameNorahAsiriUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TTTGameNorahAsiri;
+			};
+			name = Debug;
+		};
+		84DE9580275E88FB001F33F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NorahAsiri.TTTGameNorahAsiriUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TTTGameNorahAsiri;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84DE9549275E88F8001F33F7 /* Build configuration list for PBXProject "TTTGameNorahAsiri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DE9576275E88FB001F33F7 /* Debug */,
+				84DE9577275E88FB001F33F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DE9578275E88FB001F33F7 /* Build configuration list for PBXNativeTarget "TTTGameNorahAsiri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DE9579275E88FB001F33F7 /* Debug */,
+				84DE957A275E88FB001F33F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DE957B275E88FB001F33F7 /* Build configuration list for PBXNativeTarget "TTTGameNorahAsiriTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DE957C275E88FB001F33F7 /* Debug */,
+				84DE957D275E88FB001F33F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DE957E275E88FB001F33F7 /* Build configuration list for PBXNativeTarget "TTTGameNorahAsiriUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DE957F275E88FB001F33F7 /* Debug */,
+				84DE9580275E88FB001F33F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84DE9546275E88F8001F33F7 /* Project object */;
+}
