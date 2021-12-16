@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     
 
     @IBAction func setDirection(_ sender: UIButton) {
+        
+       // performSegue(withIdentifier: "direction", sender:sender.titleLabel!.text!)
+        
         direction = sender.titleLabel?.text ?? ""
     }
     
@@ -22,6 +25,8 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+      //  let predirection =  sender as! String
         let destination = segue.destination as! DirectionViewController
        
         // send value

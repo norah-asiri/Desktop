@@ -57,7 +57,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="West"/>
                                 <connections>
                                     <action selector="setDirection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFh-eI-5cx"/>
-                                    <segue destination="KB8-6U-Nj8" kind="presentation" id="uML-QI-33N"/>
+                                    <segue destination="KB8-6U-Nj8" kind="presentation" id="HxB-nD-Zfq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9R-Bd-faa">
@@ -68,7 +68,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="East"/>
                                 <connections>
                                     <action selector="setDirection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gxd-dT-wHu"/>
-                                    <segue destination="KB8-6U-Nj8" kind="presentation" id="usw-tS-ZuK"/>
+                                    <segue destination="KB8-6U-Nj8" kind="presentation" id="Xqj-7s-jyI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSp-B0-HfG">
@@ -79,7 +79,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="South"/>
                                 <connections>
                                     <action selector="setDirection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vP8-zn-nHA"/>
-                                    <segue destination="KB8-6U-Nj8" kind="presentation" id="ZFI-8O-z1s"/>
+                                    <segue destination="KB8-6U-Nj8" kind="presentation" identifier="DirectionSeg" id="WLE-mC-bda"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7c-YT-fgQ">
@@ -90,7 +90,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="North"/>
                                 <connections>
                                     <action selector="setDirection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ryO-z4-Ypa"/>
-                                    <segue destination="KB8-6U-Nj8" kind="presentation" id="Ufh-rS-ncw"/>
+                                    <segue destination="KB8-6U-Nj8" kind="presentation" id="ciX-Vr-e0s"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -133,7 +133,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ufh-rS-ncw"/>
+        <segue reference="HxB-nD-Zfq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="linkColor">
