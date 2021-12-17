@@ -40,7 +40,7 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
     }
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        performSegue(withIdentifier: "EidtItemSegue", sender: indexPath)
+        performSegue(withIdentifier: "EidtItem", sender: indexPath)
         
     }
     

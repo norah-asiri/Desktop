@@ -33,12 +33,12 @@
                     <navigationItem key="navigationItem" id="tOg-e7-f9s">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="9Nm-bf-GPB">
                             <connections>
-                                <segue destination="f6v-hm-sFj" kind="presentation" identifier="AddItemSegue" id="hkN-3I-ft8"/>
+                                <segue destination="f6v-hm-sFj" kind="presentation" identifier="EidtItem" id="UPy-BP-2af"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="f6v-hm-sFj" kind="presentation" identifier="EidtItemSegue" id="eCu-Dm-x8y"/>
+                        <segue destination="f6v-hm-sFj" kind="presentation" identifier="EidtItem" id="Nhl-qH-djo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QjK-b1-h0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -143,7 +143,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hkN-3I-ft8"/>
+        <segue reference="UPy-BP-2af"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
