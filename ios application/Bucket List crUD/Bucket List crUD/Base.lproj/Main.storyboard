@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="sHU-Wj-NVg">
+                            <tableViewSection headerTitle="Section-1" id="sHU-Wj-NVg">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="HQn-6D-Tck">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="83"/>
@@ -60,17 +60,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEs-jK-KJr">
-                                                    <rect key="frame" x="8" y="6" width="398" height="71"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="xT9-Ex-RAI">
+                                                    <rect key="frame" x="6" y="8" width="402" height="67"/>
+                                                    <color key="backgroundColor" red="0.321399237" green="0.68757090580000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="YEs-jK-KJr" secondAttribute="bottom" constant="6" id="Bm3-3j-6me"/>
-                                                <constraint firstAttribute="trailing" secondItem="YEs-jK-KJr" secondAttribute="trailing" constant="8" id="EcU-hE-0D1"/>
-                                                <constraint firstItem="YEs-jK-KJr" firstAttribute="leading" secondItem="Njv-Au-0Vq" secondAttribute="leading" constant="8" id="Gib-c7-k2G"/>
-                                                <constraint firstItem="YEs-jK-KJr" firstAttribute="top" secondItem="Njv-Au-0Vq" secondAttribute="top" constant="6" id="Tu4-mo-5lh"/>
+                                                <constraint firstAttribute="bottom" secondItem="xT9-Ex-RAI" secondAttribute="bottom" constant="8" id="St0-Gi-o6z"/>
+                                                <constraint firstItem="xT9-Ex-RAI" firstAttribute="leading" secondItem="Njv-Au-0Vq" secondAttribute="leading" constant="6" id="ZGa-M2-KqQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="xT9-Ex-RAI" secondAttribute="trailing" constant="6" id="czx-to-k4X"/>
+                                                <constraint firstItem="xT9-Ex-RAI" firstAttribute="top" secondItem="Njv-Au-0Vq" secondAttribute="top" constant="8" id="xCq-lR-cjT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -95,7 +96,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="itemTextField" destination="YEs-jK-KJr" id="xdw-sL-TFX"/>
+                        <outlet property="itemTextField" destination="xT9-Ex-RAI" id="Euj-6X-gdV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZtL-HE-EPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
