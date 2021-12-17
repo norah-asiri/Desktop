@@ -1,13 +1,13 @@
 //
-//  PersistentUITests.swift
-//  PersistentUITests
+//  Bucket_List_crUDUITests.swift
+//  Bucket List crUDUITests
 //
 //  Created by admin on 16/12/2021.
 //
 
 import XCTest
 
-class PersistentUITests: XCTestCase {
+class Bucket_List_crUDUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

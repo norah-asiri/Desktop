@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Persistent
+//  Bucket List crUD
 //
 //  Created by admin on 16/12/2021.
 //
