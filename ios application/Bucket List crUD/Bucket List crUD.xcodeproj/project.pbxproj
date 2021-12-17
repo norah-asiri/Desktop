@@ -16,6 +16,8 @@
 		84790FDD276BC1D200955507 /* Bucket_List_crUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84790FDC276BC1D200955507 /* Bucket_List_crUDTests.swift */; };
 		84790FE7276BC1D200955507 /* Bucket_List_crUDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84790FE6276BC1D200955507 /* Bucket_List_crUDUITests.swift */; };
 		84790FE9276BC1D200955507 /* Bucket_List_crUDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84790FE8276BC1D200955507 /* Bucket_List_crUDUITestsLaunchTests.swift */; };
+		8479106E276C7B1500955507 /* AddItemTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479106D276C7B1500955507 /* AddItemTableTableViewController.swift */; };
+		84791070276C7C5400955507 /* CancelBtnDelgate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479106F276C7C5400955507 /* CancelBtnDelgate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		84790FE2276BC1D200955507 /* Bucket List crUDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bucket List crUDUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84790FE6276BC1D200955507 /* Bucket_List_crUDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bucket_List_crUDUITests.swift; sourceTree = "<group>"; };
 		84790FE8276BC1D200955507 /* Bucket_List_crUDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bucket_List_crUDUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8479106D276C7B1500955507 /* AddItemTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableTableViewController.swift; sourceTree = "<group>"; };
+		8479106F276C7C5400955507 /* CancelBtnDelgate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBtnDelgate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		84790FB9276BC1D000955507 = {
 			isa = PBXGroup;
 			children = (
+				8479106D276C7B1500955507 /* AddItemTableTableViewController.swift */,
+				8479106F276C7C5400955507 /* CancelBtnDelgate.swift */,
 				84790FC4276BC1D100955507 /* Bucket List crUD */,
 				84790FDB276BC1D200955507 /* Bucket List crUDTests */,
 				84790FE5276BC1D200955507 /* Bucket List crUDUITests */,
@@ -259,8 +265,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84790FCA276BC1D100955507 /* BucketListViewController.swift in Sources */,
+				84791070276C7C5400955507 /* CancelBtnDelgate.swift in Sources */,
 				84790FC6276BC1D100955507 /* AppDelegate.swift in Sources */,
 				84790FC8276BC1D100955507 /* SceneDelegate.swift in Sources */,
+				8479106E276C7B1500955507 /* AddItemTableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
