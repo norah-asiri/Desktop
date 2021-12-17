@@ -1,13 +1,13 @@
 //
-//  Bucket_List_RefactorUITests.swift
-//  Bucket List RefactorUITests
+//  Bucket_List_crUDUITests.swift
+//  Bucket List crUDUITests
 //
 //  Created by admin on 16/12/2021.
 //
 
 import XCTest
 
-class Bucket_List_RefactorUITests: XCTestCase {
+class Bucket_List_crUDUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

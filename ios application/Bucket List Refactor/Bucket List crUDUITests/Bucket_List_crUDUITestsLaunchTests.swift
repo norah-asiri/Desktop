@@ -1,13 +1,13 @@
 //
-//  Bucket_List_RefactorUITestsLaunchTests.swift
-//  Bucket List RefactorUITests
+//  Bucket_List_crUDUITestsLaunchTests.swift
+//  Bucket List crUDUITests
 //
 //  Created by admin on 16/12/2021.
 //
 
 import XCTest
 
-class Bucket_List_RefactorUITestsLaunchTests: XCTestCase {
+class Bucket_List_crUDUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

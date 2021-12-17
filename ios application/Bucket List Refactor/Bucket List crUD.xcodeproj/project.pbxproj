@@ -7,66 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84791002276BC20D00955507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84791001276BC20D00955507 /* AppDelegate.swift */; };
-		84791004276BC20D00955507 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84791003276BC20D00955507 /* SceneDelegate.swift */; };
-		84791006276BC20D00955507 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84791005276BC20D00955507 /* ViewController.swift */; };
-		84791009276BC20D00955507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84791007276BC20D00955507 /* Main.storyboard */; };
-		8479100B276BC20E00955507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8479100A276BC20E00955507 /* Assets.xcassets */; };
-		8479100E276BC20E00955507 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479100C276BC20E00955507 /* LaunchScreen.storyboard */; };
-		84791019276BC20E00955507 /* Bucket_List_RefactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84791018276BC20E00955507 /* Bucket_List_RefactorTests.swift */; };
-		84791023276BC20E00955507 /* Bucket_List_RefactorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84791022276BC20E00955507 /* Bucket_List_RefactorUITests.swift */; };
-		84791025276BC20E00955507 /* Bucket_List_RefactorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84791024276BC20E00955507 /* Bucket_List_RefactorUITestsLaunchTests.swift */; };
+		84790FC6276BC1D100955507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84790FC5276BC1D100955507 /* AppDelegate.swift */; };
+		84790FC8276BC1D100955507 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84790FC7276BC1D100955507 /* SceneDelegate.swift */; };
+		84790FCA276BC1D100955507 /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84790FC9276BC1D100955507 /* BucketListViewController.swift */; };
+		84790FCD276BC1D100955507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84790FCB276BC1D100955507 /* Main.storyboard */; };
+		84790FCF276BC1D100955507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84790FCE276BC1D100955507 /* Assets.xcassets */; };
+		84790FD2276BC1D100955507 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84790FD0276BC1D100955507 /* LaunchScreen.storyboard */; };
+		84790FDD276BC1D200955507 /* Bucket_List_crUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84790FDC276BC1D200955507 /* Bucket_List_crUDTests.swift */; };
+		84790FE7276BC1D200955507 /* Bucket_List_crUDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84790FE6276BC1D200955507 /* Bucket_List_crUDUITests.swift */; };
+		84790FE9276BC1D200955507 /* Bucket_List_crUDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84790FE8276BC1D200955507 /* Bucket_List_crUDUITestsLaunchTests.swift */; };
+		8479106E276C7B1500955507 /* AddItemTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479106D276C7B1500955507 /* AddItemTableTableViewController.swift */; };
+		84791072276C818900955507 /* AddItemTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84791071276C818900955507 /* AddItemTableViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		84791015276BC20E00955507 /* PBXContainerItemProxy */ = {
+		84790FD9276BC1D200955507 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84790FF6276BC20D00955507 /* Project object */;
+			containerPortal = 84790FBA276BC1D000955507 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 84790FFD276BC20D00955507;
-			remoteInfo = "Bucket List Refactor";
+			remoteGlobalIDString = 84790FC1276BC1D100955507;
+			remoteInfo = "Bucket List crUD";
 		};
-		8479101F276BC20E00955507 /* PBXContainerItemProxy */ = {
+		84790FE3276BC1D200955507 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84790FF6276BC20D00955507 /* Project object */;
+			containerPortal = 84790FBA276BC1D000955507 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 84790FFD276BC20D00955507;
-			remoteInfo = "Bucket List Refactor";
+			remoteGlobalIDString = 84790FC1276BC1D100955507;
+			remoteInfo = "Bucket List crUD";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		84790FFE276BC20D00955507 /* Bucket List Refactor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bucket List Refactor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		84791001276BC20D00955507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84791003276BC20D00955507 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84791005276BC20D00955507 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		84791008276BC20D00955507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8479100A276BC20E00955507 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8479100D276BC20E00955507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8479100F276BC20E00955507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84791014276BC20E00955507 /* Bucket List RefactorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bucket List RefactorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		84791018276BC20E00955507 /* Bucket_List_RefactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bucket_List_RefactorTests.swift; sourceTree = "<group>"; };
-		8479101E276BC20E00955507 /* Bucket List RefactorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bucket List RefactorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		84791022276BC20E00955507 /* Bucket_List_RefactorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bucket_List_RefactorUITests.swift; sourceTree = "<group>"; };
-		84791024276BC20E00955507 /* Bucket_List_RefactorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bucket_List_RefactorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84790FC2276BC1D100955507 /* Bucket List crUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bucket List crUD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84790FC5276BC1D100955507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84790FC7276BC1D100955507 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		84790FC9276BC1D100955507 /* BucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
+		84790FCC276BC1D100955507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84790FCE276BC1D100955507 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84790FD1276BC1D100955507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84790FD3276BC1D100955507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84790FD8276BC1D200955507 /* Bucket List crUDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bucket List crUDTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84790FDC276BC1D200955507 /* Bucket_List_crUDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bucket_List_crUDTests.swift; sourceTree = "<group>"; };
+		84790FE2276BC1D200955507 /* Bucket List crUDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bucket List crUDUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84790FE6276BC1D200955507 /* Bucket_List_crUDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bucket_List_crUDUITests.swift; sourceTree = "<group>"; };
+		84790FE8276BC1D200955507 /* Bucket_List_crUDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bucket_List_crUDUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8479106D276C7B1500955507 /* AddItemTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableTableViewController.swift; sourceTree = "<group>"; };
+		84791071276C818900955507 /* AddItemTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		84790FFB276BC20D00955507 /* Frameworks */ = {
+		84790FBF276BC1D100955507 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84791011276BC20E00955507 /* Frameworks */ = {
+		84790FD5276BC1D200955507 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8479101B276BC20E00955507 /* Frameworks */ = {
+		84790FDF276BC1D200955507 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,137 +80,139 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		84790FF5276BC20D00955507 = {
+		84790FB9276BC1D000955507 = {
 			isa = PBXGroup;
 			children = (
-				84791000276BC20D00955507 /* Bucket List Refactor */,
-				84791017276BC20E00955507 /* Bucket List RefactorTests */,
-				84791021276BC20E00955507 /* Bucket List RefactorUITests */,
-				84790FFF276BC20D00955507 /* Products */,
+				84791071276C818900955507 /* AddItemTableViewControllerDelegate.swift */,
+				8479106D276C7B1500955507 /* AddItemTableTableViewController.swift */,
+				84790FC4276BC1D100955507 /* Bucket List crUD */,
+				84790FDB276BC1D200955507 /* Bucket List crUDTests */,
+				84790FE5276BC1D200955507 /* Bucket List crUDUITests */,
+				84790FC3276BC1D100955507 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		84790FFF276BC20D00955507 /* Products */ = {
+		84790FC3276BC1D100955507 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84790FFE276BC20D00955507 /* Bucket List Refactor.app */,
-				84791014276BC20E00955507 /* Bucket List RefactorTests.xctest */,
-				8479101E276BC20E00955507 /* Bucket List RefactorUITests.xctest */,
+				84790FC2276BC1D100955507 /* Bucket List crUD.app */,
+				84790FD8276BC1D200955507 /* Bucket List crUDTests.xctest */,
+				84790FE2276BC1D200955507 /* Bucket List crUDUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		84791000276BC20D00955507 /* Bucket List Refactor */ = {
+		84790FC4276BC1D100955507 /* Bucket List crUD */ = {
 			isa = PBXGroup;
 			children = (
-				84791001276BC20D00955507 /* AppDelegate.swift */,
-				84791003276BC20D00955507 /* SceneDelegate.swift */,
-				84791005276BC20D00955507 /* ViewController.swift */,
-				84791007276BC20D00955507 /* Main.storyboard */,
-				8479100A276BC20E00955507 /* Assets.xcassets */,
-				8479100C276BC20E00955507 /* LaunchScreen.storyboard */,
-				8479100F276BC20E00955507 /* Info.plist */,
+				84790FC5276BC1D100955507 /* AppDelegate.swift */,
+				84790FC7276BC1D100955507 /* SceneDelegate.swift */,
+				84790FC9276BC1D100955507 /* BucketListViewController.swift */,
+				84790FCB276BC1D100955507 /* Main.storyboard */,
+				84790FCE276BC1D100955507 /* Assets.xcassets */,
+				84790FD0276BC1D100955507 /* LaunchScreen.storyboard */,
+				84790FD3276BC1D100955507 /* Info.plist */,
 			);
-			path = "Bucket List Refactor";
+			path = "Bucket List crUD";
 			sourceTree = "<group>";
 		};
-		84791017276BC20E00955507 /* Bucket List RefactorTests */ = {
+		84790FDB276BC1D200955507 /* Bucket List crUDTests */ = {
 			isa = PBXGroup;
 			children = (
-				84791018276BC20E00955507 /* Bucket_List_RefactorTests.swift */,
+				84790FDC276BC1D200955507 /* Bucket_List_crUDTests.swift */,
 			);
-			path = "Bucket List RefactorTests";
+			path = "Bucket List crUDTests";
 			sourceTree = "<group>";
 		};
-		84791021276BC20E00955507 /* Bucket List RefactorUITests */ = {
+		84790FE5276BC1D200955507 /* Bucket List crUDUITests */ = {
 			isa = PBXGroup;
 			children = (
-				84791022276BC20E00955507 /* Bucket_List_RefactorUITests.swift */,
-				84791024276BC20E00955507 /* Bucket_List_RefactorUITestsLaunchTests.swift */,
+				84790FE6276BC1D200955507 /* Bucket_List_crUDUITests.swift */,
+				84790FE8276BC1D200955507 /* Bucket_List_crUDUITestsLaunchTests.swift */,
 			);
-			path = "Bucket List RefactorUITests";
+			path = "Bucket List crUDUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		84790FFD276BC20D00955507 /* Bucket List Refactor */ = {
+		84790FC1276BC1D100955507 /* Bucket List crUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84791028276BC20E00955507 /* Build configuration list for PBXNativeTarget "Bucket List Refactor" */;
+			buildConfigurationList = 84790FEC276BC1D200955507 /* Build configuration list for PBXNativeTarget "Bucket List crUD" */;
 			buildPhases = (
-				84790FFA276BC20D00955507 /* Sources */,
-				84790FFB276BC20D00955507 /* Frameworks */,
-				84790FFC276BC20D00955507 /* Resources */,
+				84790FBE276BC1D100955507 /* Sources */,
+				84790FBF276BC1D100955507 /* Frameworks */,
+				84790FC0276BC1D100955507 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Bucket List Refactor";
-			productName = "Bucket List Refactor";
-			productReference = 84790FFE276BC20D00955507 /* Bucket List Refactor.app */;
+			name = "Bucket List crUD";
+			productName = "Bucket List crUD";
+			productReference = 84790FC2276BC1D100955507 /* Bucket List crUD.app */;
 			productType = "com.apple.product-type.application";
 		};
-		84791013276BC20E00955507 /* Bucket List RefactorTests */ = {
+		84790FD7276BC1D200955507 /* Bucket List crUDTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8479102B276BC20E00955507 /* Build configuration list for PBXNativeTarget "Bucket List RefactorTests" */;
+			buildConfigurationList = 84790FEF276BC1D200955507 /* Build configuration list for PBXNativeTarget "Bucket List crUDTests" */;
 			buildPhases = (
-				84791010276BC20E00955507 /* Sources */,
-				84791011276BC20E00955507 /* Frameworks */,
-				84791012276BC20E00955507 /* Resources */,
+				84790FD4276BC1D200955507 /* Sources */,
+				84790FD5276BC1D200955507 /* Frameworks */,
+				84790FD6276BC1D200955507 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				84791016276BC20E00955507 /* PBXTargetDependency */,
+				84790FDA276BC1D200955507 /* PBXTargetDependency */,
 			);
-			name = "Bucket List RefactorTests";
-			productName = "Bucket List RefactorTests";
-			productReference = 84791014276BC20E00955507 /* Bucket List RefactorTests.xctest */;
+			name = "Bucket List crUDTests";
+			productName = "Bucket List crUDTests";
+			productReference = 84790FD8276BC1D200955507 /* Bucket List crUDTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8479101D276BC20E00955507 /* Bucket List RefactorUITests */ = {
+		84790FE1276BC1D200955507 /* Bucket List crUDUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8479102E276BC20E00955507 /* Build configuration list for PBXNativeTarget "Bucket List RefactorUITests" */;
+			buildConfigurationList = 84790FF2276BC1D200955507 /* Build configuration list for PBXNativeTarget "Bucket List crUDUITests" */;
 			buildPhases = (
-				8479101A276BC20E00955507 /* Sources */,
-				8479101B276BC20E00955507 /* Frameworks */,
-				8479101C276BC20E00955507 /* Resources */,
+				84790FDE276BC1D200955507 /* Sources */,
+				84790FDF276BC1D200955507 /* Frameworks */,
+				84790FE0276BC1D200955507 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				84791020276BC20E00955507 /* PBXTargetDependency */,
+				84790FE4276BC1D200955507 /* PBXTargetDependency */,
 			);
-			name = "Bucket List RefactorUITests";
-			productName = "Bucket List RefactorUITests";
-			productReference = 8479101E276BC20E00955507 /* Bucket List RefactorUITests.xctest */;
+			name = "Bucket List crUDUITests";
+			productName = "Bucket List crUDUITests";
+			productReference = 84790FE2276BC1D200955507 /* Bucket List crUDUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		84790FF6276BC20D00955507 /* Project object */ = {
+		84790FBA276BC1D000955507 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					84790FFD276BC20D00955507 = {
+					84790FC1276BC1D100955507 = {
 						CreatedOnToolsVersion = 13.1;
 					};
-					84791013276BC20E00955507 = {
+					84790FD7276BC1D200955507 = {
 						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 84790FFD276BC20D00955507;
+						TestTargetID = 84790FC1276BC1D100955507;
 					};
-					8479101D276BC20E00955507 = {
+					84790FE1276BC1D200955507 = {
 						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 84790FFD276BC20D00955507;
+						TestTargetID = 84790FC1276BC1D100955507;
 					};
 				};
 			};
-			buildConfigurationList = 84790FF9276BC20D00955507 /* Build configuration list for PBXProject "Bucket List Refactor" */;
+			buildConfigurationList = 84790FBD276BC1D000955507 /* Build configuration list for PBXProject "Bucket List crUD" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,37 +220,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 84790FF5276BC20D00955507;
-			productRefGroup = 84790FFF276BC20D00955507 /* Products */;
+			mainGroup = 84790FB9276BC1D000955507;
+			productRefGroup = 84790FC3276BC1D100955507 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				84790FFD276BC20D00955507 /* Bucket List Refactor */,
-				84791013276BC20E00955507 /* Bucket List RefactorTests */,
-				8479101D276BC20E00955507 /* Bucket List RefactorUITests */,
+				84790FC1276BC1D100955507 /* Bucket List crUD */,
+				84790FD7276BC1D200955507 /* Bucket List crUDTests */,
+				84790FE1276BC1D200955507 /* Bucket List crUDUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		84790FFC276BC20D00955507 /* Resources */ = {
+		84790FC0276BC1D100955507 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8479100E276BC20E00955507 /* LaunchScreen.storyboard in Resources */,
-				8479100B276BC20E00955507 /* Assets.xcassets in Resources */,
-				84791009276BC20D00955507 /* Main.storyboard in Resources */,
+				84790FD2276BC1D100955507 /* LaunchScreen.storyboard in Resources */,
+				84790FCF276BC1D100955507 /* Assets.xcassets in Resources */,
+				84790FCD276BC1D100955507 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84791012276BC20E00955507 /* Resources */ = {
+		84790FD6276BC1D200955507 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8479101C276BC20E00955507 /* Resources */ = {
+		84790FE0276BC1D200955507 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,61 +260,63 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		84790FFA276BC20D00955507 /* Sources */ = {
+		84790FBE276BC1D100955507 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84791006276BC20D00955507 /* ViewController.swift in Sources */,
-				84791002276BC20D00955507 /* AppDelegate.swift in Sources */,
-				84791004276BC20D00955507 /* SceneDelegate.swift in Sources */,
+				84790FCA276BC1D100955507 /* BucketListViewController.swift in Sources */,
+				84790FC6276BC1D100955507 /* AppDelegate.swift in Sources */,
+				84790FC8276BC1D100955507 /* SceneDelegate.swift in Sources */,
+				8479106E276C7B1500955507 /* AddItemTableTableViewController.swift in Sources */,
+				84791072276C818900955507 /* AddItemTableViewControllerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84791010276BC20E00955507 /* Sources */ = {
+		84790FD4276BC1D200955507 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84791019276BC20E00955507 /* Bucket_List_RefactorTests.swift in Sources */,
+				84790FDD276BC1D200955507 /* Bucket_List_crUDTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8479101A276BC20E00955507 /* Sources */ = {
+		84790FDE276BC1D200955507 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84791025276BC20E00955507 /* Bucket_List_RefactorUITestsLaunchTests.swift in Sources */,
-				84791023276BC20E00955507 /* Bucket_List_RefactorUITests.swift in Sources */,
+				84790FE9276BC1D200955507 /* Bucket_List_crUDUITestsLaunchTests.swift in Sources */,
+				84790FE7276BC1D200955507 /* Bucket_List_crUDUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		84791016276BC20E00955507 /* PBXTargetDependency */ = {
+		84790FDA276BC1D200955507 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84790FFD276BC20D00955507 /* Bucket List Refactor */;
-			targetProxy = 84791015276BC20E00955507 /* PBXContainerItemProxy */;
+			target = 84790FC1276BC1D100955507 /* Bucket List crUD */;
+			targetProxy = 84790FD9276BC1D200955507 /* PBXContainerItemProxy */;
 		};
-		84791020276BC20E00955507 /* PBXTargetDependency */ = {
+		84790FE4276BC1D200955507 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84790FFD276BC20D00955507 /* Bucket List Refactor */;
-			targetProxy = 8479101F276BC20E00955507 /* PBXContainerItemProxy */;
+			target = 84790FC1276BC1D100955507 /* Bucket List crUD */;
+			targetProxy = 84790FE3276BC1D200955507 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		84791007276BC20D00955507 /* Main.storyboard */ = {
+		84790FCB276BC1D100955507 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				84791008276BC20D00955507 /* Base */,
+				84790FCC276BC1D100955507 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		8479100C276BC20E00955507 /* LaunchScreen.storyboard */ = {
+		84790FD0276BC1D100955507 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8479100D276BC20E00955507 /* Base */,
+				84790FD1276BC1D100955507 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -316,7 +324,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		84791026276BC20E00955507 /* Debug */ = {
+		84790FEA276BC1D200955507 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -377,7 +385,7 @@
 			};
 			name = Debug;
 		};
-		84791027276BC20E00955507 /* Release */ = {
+		84790FEB276BC1D200955507 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -432,7 +440,7 @@
 			};
 			name = Release;
 		};
-		84791029276BC20E00955507 /* Debug */ = {
+		84790FED276BC1D200955507 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -440,10 +448,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Bucket List Refactor/Info.plist";
+				INFOPLIST_FILE = "Bucket List crUD/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,7 +460,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NorahAsiri.Bucket-List-Refactor";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NorahAsiri.Bucket-List-crUD";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -459,7 +468,7 @@
 			};
 			name = Debug;
 		};
-		8479102A276BC20E00955507 /* Release */ = {
+		84790FEE276BC1D200955507 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -467,10 +476,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Bucket List Refactor/Info.plist";
+				INFOPLIST_FILE = "Bucket List crUD/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -478,7 +488,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NorahAsiri.Bucket-List-Refactor";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NorahAsiri.Bucket-List-crUD";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -486,7 +496,7 @@
 			};
 			name = Release;
 		};
-		8479102C276BC20E00955507 /* Debug */ = {
+		84790FF0276BC1D200955507 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -501,16 +511,16 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NorahAsiri.Bucket-List-RefactorTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NorahAsiri.Bucket-List-crUDTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bucket List Refactor.app/Bucket List Refactor";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bucket List crUD.app/Bucket List crUD";
 			};
 			name = Debug;
 		};
-		8479102D276BC20E00955507 /* Release */ = {
+		84790FF1276BC1D200955507 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -525,16 +535,16 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NorahAsiri.Bucket-List-RefactorTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NorahAsiri.Bucket-List-crUDTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bucket List Refactor.app/Bucket List Refactor";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bucket List crUD.app/Bucket List crUD";
 			};
 			name = Release;
 		};
-		8479102F276BC20E00955507 /* Debug */ = {
+		84790FF3276BC1D200955507 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -547,16 +557,16 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NorahAsiri.Bucket-List-RefactorUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NorahAsiri.Bucket-List-crUDUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Bucket List Refactor";
+				TEST_TARGET_NAME = "Bucket List crUD";
 			};
 			name = Debug;
 		};
-		84791030276BC20E00955507 /* Release */ = {
+		84790FF4276BC1D200955507 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -569,55 +579,55 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NorahAsiri.Bucket-List-RefactorUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NorahAsiri.Bucket-List-crUDUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Bucket List Refactor";
+				TEST_TARGET_NAME = "Bucket List crUD";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84790FF9276BC20D00955507 /* Build configuration list for PBXProject "Bucket List Refactor" */ = {
+		84790FBD276BC1D000955507 /* Build configuration list for PBXProject "Bucket List crUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				84791026276BC20E00955507 /* Debug */,
-				84791027276BC20E00955507 /* Release */,
+				84790FEA276BC1D200955507 /* Debug */,
+				84790FEB276BC1D200955507 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84791028276BC20E00955507 /* Build configuration list for PBXNativeTarget "Bucket List Refactor" */ = {
+		84790FEC276BC1D200955507 /* Build configuration list for PBXNativeTarget "Bucket List crUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				84791029276BC20E00955507 /* Debug */,
-				8479102A276BC20E00955507 /* Release */,
+				84790FED276BC1D200955507 /* Debug */,
+				84790FEE276BC1D200955507 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8479102B276BC20E00955507 /* Build configuration list for PBXNativeTarget "Bucket List RefactorTests" */ = {
+		84790FEF276BC1D200955507 /* Build configuration list for PBXNativeTarget "Bucket List crUDTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8479102C276BC20E00955507 /* Debug */,
-				8479102D276BC20E00955507 /* Release */,
+				84790FF0276BC1D200955507 /* Debug */,
+				84790FF1276BC1D200955507 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8479102E276BC20E00955507 /* Build configuration list for PBXNativeTarget "Bucket List RefactorUITests" */ = {
+		84790FF2276BC1D200955507 /* Build configuration list for PBXNativeTarget "Bucket List crUDUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8479102F276BC20E00955507 /* Debug */,
-				84791030276BC20E00955507 /* Release */,
+				84790FF3276BC1D200955507 /* Debug */,
+				84790FF4276BC1D200955507 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 84790FF6276BC20D00955507 /* Project object */;
+	rootObject = 84790FBA276BC1D000955507 /* Project object */;
 }
