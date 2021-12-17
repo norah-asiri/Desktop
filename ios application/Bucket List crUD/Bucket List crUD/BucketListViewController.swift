@@ -33,20 +33,51 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print ("Select item at index \(indexPath.row)")
+    }
+    
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        performSegue(withIdentifier: "EidtItemSegue", sender: indexPath)
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        items.remove(at: indexPath.row)
+        tableView.reloadData()
+    
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "AddItemSegue" {
         let navigationController = segue.destination as! UINavigationController
         let addItemTableController = navigationController.topViewController as! AddItemTableTableViewController
         addItemTableController.delegate = self
-        
+            
+        } else if segue.identifier == "EidtItemSegue" {
+            
+            let navigationController = segue.destination as! UINavigationController
+            let addItemTableController = navigationController.topViewController as! AddItemTableTableViewController
+            addItemTableController.delegate = self
+            let indexPath = sender as! NSIndexPath
+            let item = items[indexPath.row]
+            addItemTableController.item = item
+            addItemTableController.indexPath = indexPath
+        }
     }
     func cancelBtn(by controller: AddItemTableTableViewController) {
         print ("hidden , cancelBtnPressed")
         dismiss(animated: true, completion: nil)
     }
     
-    func itemSave(by controller: AddItemTableTableViewController , with text : String) {
+    func itemSave(by controller: AddItemTableTableViewController , with text : String, at indexPath : NSIndexPath?) {
+        if let ip = indexPath {
+            items[ip.row] = text
+        } else {
         print ("text : \(text)")
         items.append(text)
+        }
         tableView.reloadData()
         dismiss(animated: true, completion: nil)
         

@@ -16,11 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListItemCell" id="pRj-Uo-Qaf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ListItemCell" id="pRj-Uo-Qaf">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pRj-Uo-Qaf" id="Nc7-ZR-1Hc">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="356" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -31,12 +31,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="tOg-e7-f9s">
-                        <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="9Nm-bf-GPB">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="9Nm-bf-GPB">
                             <connections>
-                                <segue destination="f6v-hm-sFj" kind="presentation" id="2Mh-84-jLB"/>
+                                <segue destination="f6v-hm-sFj" kind="presentation" identifier="AddItemSegue" id="hkN-3I-ft8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="f6v-hm-sFj" kind="presentation" identifier="EidtItemSegue" id="eCu-Dm-x8y"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QjK-b1-h0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,7 +65,6 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="xT9-Ex-RAI">
                                                     <rect key="frame" x="6" y="8" width="402" height="67"/>
-                                                    <color key="backgroundColor" red="0.321399237" green="0.68757090580000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -140,8 +142,11 @@
             <point key="canvasLocation" x="2118.840579710145" y="126.5625"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hkN-3I-ft8"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
