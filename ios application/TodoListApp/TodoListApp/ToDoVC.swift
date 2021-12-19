@@ -12,6 +12,7 @@ class ToDoVC: UITableViewController {
 
     let todeTest = ToDo(title: "test", description: "teeeeeeest", date : nil)
     let toDoUpdate = ToDo(title: "UPDATEtest", description: "teeeeeeestUuuuuuup", date: nil)
+    var getToDoList : [ToDo] = []
     
     
     
@@ -23,25 +24,34 @@ class ToDoVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       //print("STAAAAAAART")
-       //storeToDo(todo: todeTest)
-       // getToDo()
-       // updateToDo(todo: toDoUpdate , index: 0)
-        deleteToDo(index: 0)
+       print("STAAAAAAART")
+       storeToDo(todo: todeTest)
+       getToDoList = getToDo()
+       updateToDo(todo: toDoUpdate , index: 0)
+      //  deleteToDo(index: 0)
         tableView.reloadData()
         
     }
     
+  
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return getToDoList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
+        
+        cell.titleLabel.text = getToDoList[indexPath.row].title
+     cell.dateLabel.text = "   \(getToDoList[indexPath.row].date)"
+     cell.descriptionLabel.text = getToDoList[indexPath.row].description
+     
         // dequeue the cell from our storyboard
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
         // All UITableViewCell objects have a build in textLabel so set it to the model that is corresponding to the row in array
        // cell.
-        cell.textLabel?.text = todeTest.title
+       // cell.textLabel?.text = todeTest.title
         // return cell so that Table View knows what to draw in each row
         return cell
     }
