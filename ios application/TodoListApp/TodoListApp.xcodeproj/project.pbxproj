@@ -19,6 +19,7 @@
 		847910ED276F54A300955507 /* TodoListAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847910EC276F54A300955507 /* TodoListAppUITestsLaunchTests.swift */; };
 		847910FA276F671000955507 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847910F9276F671000955507 /* ToDo.swift */; };
 		847910FC276FC2D900955507 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847910FB276FC2D900955507 /* CustomCell.swift */; };
+		847910FE276FCE7400955507 /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847910FD276FCE7400955507 /* AddVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		847910EC276F54A300955507 /* TodoListAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		847910F9276F671000955507 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		847910FB276FC2D900955507 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = SOURCE_ROOT; };
+		847910FD276FCE7400955507 /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				847910FB276FC2D900955507 /* CustomCell.swift */,
 				847910F9276F671000955507 /* ToDo.swift */,
 				847910CC276F549A00955507 /* Main.storyboard */,
+				847910FD276FCE7400955507 /* AddVC.swift */,
 				847910D2276F54A300955507 /* Assets.xcassets */,
 				847910D4276F54A300955507 /* LaunchScreen.storyboard */,
 				847910D7276F54A300955507 /* Info.plist */,
@@ -272,6 +275,7 @@
 				847910C7276F549A00955507 /* AppDelegate.swift in Sources */,
 				847910C9276F549A00955507 /* SceneDelegate.swift in Sources */,
 				847910FC276FC2D900955507 /* CustomCell.swift in Sources */,
+				847910FE276FCE7400955507 /* AddVC.swift in Sources */,
 				847910D1276F549A00955507 /* TodoListApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

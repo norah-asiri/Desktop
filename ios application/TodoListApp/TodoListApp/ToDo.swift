@@ -9,6 +9,6 @@ import UIKit
 struct ToDo {
     var title : String
     var description : String
-    var date : Date?
+    var date : String
     
 }

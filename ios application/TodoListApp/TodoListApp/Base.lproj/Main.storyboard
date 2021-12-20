@@ -43,14 +43,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tr6-j5-NKg">
-                                            <rect key="frame" x="344" y="62.5" width="50" height="31"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="checkmark" catalog="system" title="  "/>
-                                            <connections>
-                                                <action selector="checkBtnAction:" destination="xuL-Ny-W66" eventType="touchUpInside" id="7pC-Pk-AD6"/>
-                                            </connections>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="describe the task here . Bla Bla Bla BLa Bla  BLa" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fso-DD-cSl">
                                             <rect key="frame" x="10" y="67" width="310" height="77"/>
                                             <constraints>
@@ -65,22 +57,17 @@
                                     <constraints>
                                         <constraint firstItem="byO-cL-MDG" firstAttribute="leading" secondItem="xnV-8L-FLl" secondAttribute="leading" constant="10" id="1bC-QV-EgE"/>
                                         <constraint firstItem="0wd-Jx-93U" firstAttribute="top" secondItem="xnV-8L-FLl" secondAttribute="top" constant="10" id="2g2-Re-FXB"/>
-                                        <constraint firstItem="Tr6-j5-NKg" firstAttribute="leading" secondItem="Fso-DD-cSl" secondAttribute="trailing" constant="24" id="37V-YF-4NH"/>
-                                        <constraint firstItem="Tr6-j5-NKg" firstAttribute="centerY" secondItem="xnV-8L-FLl" secondAttribute="centerY" id="8E9-BM-CmY"/>
                                         <constraint firstItem="Fso-DD-cSl" firstAttribute="height" secondItem="xnV-8L-FLl" secondAttribute="height" multiplier="0.49359" id="Ays-iv-AhJ"/>
                                         <constraint firstAttribute="trailing" secondItem="0wd-Jx-93U" secondAttribute="trailing" constant="10" id="F2D-He-QmT"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Fso-DD-cSl" secondAttribute="bottom" constant="1" id="Ndd-Qn-vuj"/>
                                         <constraint firstItem="Fso-DD-cSl" firstAttribute="top" secondItem="byO-cL-MDG" secondAttribute="bottom" constant="36.5" id="Ohs-t0-hOr"/>
                                         <constraint firstItem="Fso-DD-cSl" firstAttribute="leading" secondItem="xnV-8L-FLl" secondAttribute="leadingMargin" constant="-10" id="ZgC-Ua-aeM"/>
-                                        <constraint firstItem="Tr6-j5-NKg" firstAttribute="top" secondItem="0wd-Jx-93U" secondAttribute="bottom" constant="31.5" id="bvh-3n-ekM"/>
                                         <constraint firstItem="byO-cL-MDG" firstAttribute="top" secondItem="xnV-8L-FLl" secondAttribute="top" constant="10" id="byN-hp-cdP"/>
                                         <constraint firstItem="Fso-DD-cSl" firstAttribute="leading" secondItem="xnV-8L-FLl" secondAttribute="leadingMargin" constant="-10" id="g5R-u1-rAf"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Tr6-j5-NKg" secondAttribute="trailing" id="sdc-3E-us7"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Fso-DD-cSl" secondAttribute="bottom" constant="1" id="slK-ai-bRP"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="checkBtnOutlet" destination="Tr6-j5-NKg" id="ubR-CE-Gux"/>
                                     <outlet property="dateLabel" destination="0wd-Jx-93U" id="TDq-eE-pCa"/>
                                     <outlet property="descriptionLabel" destination="Fso-DD-cSl" id="kwq-8L-hRu"/>
                                     <outlet property="titleLabel" destination="byO-cL-MDG" id="fOY-ZK-TJR"/>
@@ -104,10 +91,11 @@
             </objects>
             <point key="canvasLocation" x="3858" y="-204"/>
         </scene>
-        <!--View Controller-->
+        <!--AddVC-->
         <scene sceneID="Amf-cl-621">
             <objects>
-                <viewController id="g5M-89-jLu" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aye-2w-qA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="g5M-89-jLu" customClass="AddVC" customModule="TodoListApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WWJ-rx-A7o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,6 +132,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Add Item">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="50"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="g5M-89-jLu" eventType="touchUpInside" id="K8e-ZG-0bD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cpE-Su-7wo"/>
@@ -166,8 +157,12 @@
                             <constraint firstItem="wZc-0A-WKR" firstAttribute="centerX" secondItem="WWJ-rx-A7o" secondAttribute="centerX" id="upk-qJ-3Kz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="WVJ-5H-jq3" id="Qxs-hI-DXF"/>
+                        <outlet property="descriptionTextField" destination="Qls-0j-m0H" id="O98-aQ-z4Z"/>
+                        <outlet property="titleTextField" destination="8kO-pk-BWU" id="xa9-8N-bTC"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Aye-2w-qA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4631.884057971015" y="-204.24107142857142"/>
         </scene>
@@ -191,7 +186,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

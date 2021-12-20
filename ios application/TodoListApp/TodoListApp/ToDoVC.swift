@@ -10,8 +10,8 @@ import CoreData
 
 class ToDoVC: UITableViewController {
 
-    let todeTest = ToDo(title: "test", description: "teeeeeeest", date : nil)
-    let toDoUpdate = ToDo(title: "UPDATEtest", description: "teeeeeeestUuuuuuup", date: nil)
+    let todeTest = ToDo(title: "test", description: "teeeeeeest", date : "1-1-21")
+    let toDoUpdate = ToDo(title: "UPDATEtest", description: "teeeeeeestUuuuuuup", date: "1-1-21")
     var getToDoList : [ToDo] = []
     
     
@@ -26,8 +26,8 @@ class ToDoVC: UITableViewController {
         // Do any additional setup after loading the view.
        print("STAAAAAAART")
        storeToDo(todo: todeTest)
-       getToDoList = getToDo()
-       updateToDo(todo: toDoUpdate , index: 0)
+      // getToDoList = getToDo()
+      // updateToDo(todo: toDoUpdate , index: 0)
       //  deleteToDo(index: 0)
         tableView.reloadData()
         
@@ -44,7 +44,7 @@ class ToDoVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
         
         cell.titleLabel.text = getToDoList[indexPath.row].title
-     cell.dateLabel.text = "   \(getToDoList[indexPath.row].date)"
+        cell.dateLabel.text = "   \(String(describing: getToDoList[indexPath.row].date))"
      cell.descriptionLabel.text = getToDoList[indexPath.row].description
      
         // dequeue the cell from our storyboard
@@ -54,6 +54,34 @@ class ToDoVC: UITableViewController {
        // cell.textLabel?.text = todeTest.title
         // return cell so that Table View knows what to draw in each row
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if   tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark
+                
+        {
+        tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
+        }else
+        {
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+        
+        }
+    }
+    
+
+    
+    func addNewToDo (){
+        
+    }
+    
+    
+    func updateToDo(){
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //let destination = segue.destination as! AddVC
+        // destination.titleTextField
     }
     
     // save to core data
@@ -70,7 +98,7 @@ class ToDoVC: UITableViewController {
         
         do {
             try manageContext.save()
-            print ("-------Done----------")
+            print ("-------Save Done----------")
             
         } catch {
             print ("ERROOOOORRR")
@@ -96,23 +124,27 @@ class ToDoVC: UITableViewController {
                 
                 let description = managedToDo.value(forKey: "description") as! String
                 
-              //  let date = managedToDo.value(forKey: "title") as! Date
+                let date = manageContext.value(forKey: "date") as! String
                 
-                let NewToDo = ToDo(title: title , description: description, date: nil)
+            
+                
+                let NewToDo = ToDo(title: title , description: description, date: date)
                 
                 toDos.append(NewToDo)
             }
             try manageContext.save()
-            print ("-------Done----------")
-            print("toDos list from DB is \(toDos)")
+            print ("------- update Done----------")
+            
+            for i in toDos{
+                print("\(i.title) \n \(i.description) \n \(i.date)")
+                      
+                      }
             return toDos
             
         } catch {
             print ("ERROOOOORRR")
             return []
         }
-        print("toDos list from DB is \(toDos)")
-        return toDos
     }
 
     // update core data
@@ -136,6 +168,9 @@ class ToDoVC: UITableViewController {
              try manageContext.save()
              
              print ("-------Done update----------")
+             
+        
+             print("\n \(todo.title) \n \(todo.description) \n \(todo.date)")
              
          } catch {
              print ("ERROOOOORRR")
@@ -163,6 +198,7 @@ class ToDoVC: UITableViewController {
              try manageContext.save()
              
              print ("-------Done delete----------")
+           
              
          } catch {
              print ("ERROOOOORRR")
