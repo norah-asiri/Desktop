@@ -18,8 +18,8 @@
 		84790FE9276BC1D200955507 /* Bucket_List_crUDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84790FE8276BC1D200955507 /* Bucket_List_crUDUITestsLaunchTests.swift */; };
 		8479106E276C7B1500955507 /* AddItemTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479106D276C7B1500955507 /* AddItemTableTableViewController.swift */; };
 		84791072276C818900955507 /* AddItemTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84791071276C818900955507 /* AddItemTableViewControllerDelegate.swift */; };
-		847910B7276CBEC600955507 /* BucketList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 847910B5276CBEC600955507 /* BucketList.xcdatamodeld */; };
-		847910B9276CCEB300955507 /* BucketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847910B8276CCEB300955507 /* BucketListItem.swift */; };
+		847910B7276CBEC600955507 /* BucketListCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 847910B5276CBEC600955507 /* BucketListCD.xcdatamodeld */; };
+		847910B9276CCEB300955507 /* BucketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847910B8276CCEB300955507 /* BucketList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		8479106D276C7B1500955507 /* AddItemTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableTableViewController.swift; sourceTree = "<group>"; };
 		84791071276C818900955507 /* AddItemTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableViewControllerDelegate.swift; sourceTree = "<group>"; };
 		847910B6276CBEC600955507 /* BucketList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BucketList.xcdatamodel; sourceTree = "<group>"; };
-		847910B8276CCEB300955507 /* BucketListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListItem.swift; sourceTree = "<group>"; };
+		847910B8276CCEB300955507 /* BucketList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 		84790FB9276BC1D000955507 = {
 			isa = PBXGroup;
 			children = (
-				847910B8276CCEB300955507 /* BucketListItem.swift */,
+				847910B8276CCEB300955507 /* BucketList.swift */,
 				84791071276C818900955507 /* AddItemTableViewControllerDelegate.swift */,
 				8479106D276C7B1500955507 /* AddItemTableTableViewController.swift */,
 				84790FC4276BC1D100955507 /* Bucket List crUD */,
@@ -113,7 +113,7 @@
 				84790FC5276BC1D100955507 /* AppDelegate.swift */,
 				84790FC7276BC1D100955507 /* SceneDelegate.swift */,
 				84790FC9276BC1D100955507 /* BucketListViewController.swift */,
-				847910B5276CBEC600955507 /* BucketList.xcdatamodeld */,
+				847910B5276CBEC600955507 /* BucketListCD.xcdatamodeld */,
 				84790FCB276BC1D100955507 /* Main.storyboard */,
 				84790FCE276BC1D100955507 /* Assets.xcassets */,
 				84790FD0276BC1D100955507 /* LaunchScreen.storyboard */,
@@ -271,8 +271,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84790FCA276BC1D100955507 /* BucketListViewController.swift in Sources */,
-				847910B9276CCEB300955507 /* BucketListItem.swift in Sources */,
-				847910B7276CBEC600955507 /* BucketList.xcdatamodeld in Sources */,
+				847910B9276CCEB300955507 /* BucketList.swift in Sources */,
+				847910B7276CBEC600955507 /* BucketListCD.xcdatamodeld in Sources */,
 				84790FC6276BC1D100955507 /* AppDelegate.swift in Sources */,
 				84790FC8276BC1D100955507 /* SceneDelegate.swift in Sources */,
 				8479106E276C7B1500955507 /* AddItemTableTableViewController.swift in Sources */,
@@ -636,13 +636,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		847910B5276CBEC600955507 /* BucketList.xcdatamodeld */ = {
+		847910B5276CBEC600955507 /* BucketListCD.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				847910B6276CBEC600955507 /* BucketList.xcdatamodel */,
 			);
 			currentVersion = 847910B6276CBEC600955507 /* BucketList.xcdatamodel */;
-			path = BucketList.xcdatamodeld;
+			path = BucketListCD.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

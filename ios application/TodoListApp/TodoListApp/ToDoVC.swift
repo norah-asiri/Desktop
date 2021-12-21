@@ -67,20 +67,7 @@ class ToDoVC: UITableViewController {
         
         }
     }
-    
 
-    
-    func addNewToDo (){
-        
-    }
-    
-    
-    func updateToDo(){
-        
-    }
-    
-   
-    
     // save to core data
     
     func storeToDo(todo : ToDo) {
