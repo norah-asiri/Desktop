@@ -16,6 +16,7 @@
 		84790FA1276BA92600955507 /* MadLibsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84790FA0276BA92600955507 /* MadLibsTests.swift */; };
 		84790FAB276BA92600955507 /* MadLibsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84790FAA276BA92600955507 /* MadLibsUITests.swift */; };
 		84790FAD276BA92600955507 /* MadLibsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84790FAC276BA92600955507 /* MadLibsUITestsLaunchTests.swift */; };
+		84A948052771C54C00923829 /* StatmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A948042771C54C00923829 /* StatmentVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		84790FA6276BA92600955507 /* MadLibsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadLibsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84790FAA276BA92600955507 /* MadLibsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadLibsUITests.swift; sourceTree = "<group>"; };
 		84790FAC276BA92600955507 /* MadLibsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadLibsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84A948042771C54C00923829 /* StatmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatmentVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				84790F89276BA92400955507 /* AppDelegate.swift */,
 				84790F8B276BA92400955507 /* SceneDelegate.swift */,
 				84790F8D276BA92400955507 /* ViewController.swift */,
+				84A948042771C54C00923829 /* StatmentVC.swift */,
 				84790F8F276BA92400955507 /* Main.storyboard */,
 				84790F92276BA92500955507 /* Assets.xcassets */,
 				84790F94276BA92500955507 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				84790F8E276BA92400955507 /* ViewController.swift in Sources */,
 				84790F8A276BA92400955507 /* AppDelegate.swift in Sources */,
+				84A948052771C54C00923829 /* StatmentVC.swift in Sources */,
 				84790F8C276BA92400955507 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
