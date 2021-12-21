@@ -46,6 +46,7 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         items.remove(at: indexPath.row)
+        deleteCoreData(index: indexPath.row)
         tableView.reloadData()
     
     }
@@ -73,8 +74,8 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
         
         guard let applegate = UIApplication.shared.delegate as? AppDelegate else {return}
         let manageContext = applegate.persistentContainer.viewContext
-        guard let toDoEntity = NSEntityDescription.entity(forEntityName: "BucketListItem", in: manageContext) else {return}
-        let toDoObject = NSManagedObject.init(entity : toDoEntity , insertInto : manageContext)
+        guard let itemEntity = NSEntityDescription.entity(forEntityName: "BucketListItem", in: manageContext) else {return}
+        let toDoObject = NSManagedObject.init(entity : itemEntity , insertInto : manageContext)
         toDoObject.setValue(item.task, forKey: "task")
       
         
@@ -220,6 +221,7 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
             var item = items[ip.row]
             item.task = text
             updateCoreData(item: item, index: ip.row)
+            
             /*
             if managedObjectContext.hasChanges {
                 do {
@@ -241,10 +243,11 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
           //  var item = NSEntityDescription.insertNewObject(forEntityName: "BucketListItem", into: managedObjectContext) as! BucketList
           //  thing.task = text
             let t = BucketList(task : text)
-            items.append(t)
+           // items.append(t)
             storeCoreData(item: t)
     
         }
+        items = getCoreData()
         tableView.reloadData()
         dismiss(animated: true, completion: nil)
         
