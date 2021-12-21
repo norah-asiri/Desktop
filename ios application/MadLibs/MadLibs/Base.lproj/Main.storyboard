@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="GVX-oc-nKV">
             <objects>
-                <viewController id="4IP-Iv-fVi" customClass="ViewController" customModule="MadLibs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4IP-Iv-fVi" customClass="MainVC" customModule="MadLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tg6-NB-2ae">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkE-V2-fIf">
-                                <rect key="frame" x="207" y="448" width="0.0" height="0.0"/>
+                                <rect key="frame" x="50" y="50" width="314" height="796"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -27,6 +27,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pkE-V2-fIf" firstAttribute="centerX" secondItem="Tg6-NB-2ae" secondAttribute="centerX" id="2Me-LP-dRn"/>
+                            <constraint firstItem="pkE-V2-fIf" firstAttribute="leading" secondItem="Tg6-NB-2ae" secondAttribute="leading" constant="50" id="653-y5-fjS"/>
+                            <constraint firstAttribute="bottom" secondItem="pkE-V2-fIf" secondAttribute="bottom" constant="50" id="PfX-Ly-fq8"/>
+                            <constraint firstAttribute="trailing" secondItem="pkE-V2-fIf" secondAttribute="trailing" constant="50" id="jXO-jZ-oP6"/>
+                            <constraint firstItem="pkE-V2-fIf" firstAttribute="top" secondItem="Tg6-NB-2ae" secondAttribute="top" constant="50" id="l9e-qI-NGn"/>
                             <constraint firstItem="pkE-V2-fIf" firstAttribute="centerY" secondItem="Tg6-NB-2ae" secondAttribute="centerY" id="qg1-3a-9b9"/>
                         </constraints>
                     </view>
@@ -48,7 +52,7 @@
         <!--StatmentVC-->
         <scene sceneID="27d-el-0fE">
             <objects>
-                <viewController id="zB6-To-0hI" customClass="StatmentVC" customModule="MadLibs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatmentVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zB6-To-0hI" customClass="StatmentVC" customModule="MadLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QAm-9V-hhM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -7,17 +7,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
     
     @IBOutlet weak var statmentLB: UILabel!
-    
+    var statment = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        statmentLB.text! = statment
     }
+    
+    func reload () {
+        viewDidLoad()
 
-
+    }
 }
 
