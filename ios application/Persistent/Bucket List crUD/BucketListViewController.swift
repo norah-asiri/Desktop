@@ -10,14 +10,15 @@ import CoreData
 
 class BucketListViewController: UITableViewController , AddItemTableViewControllerDelegate {
 
-    var items = [BucketList]()
-    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var items : [BucketList] = []
+   // let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("loaded")
-        fetchAllItems()
+        items = getCoreData()
+        tableView.reloadData()
     }
     override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -31,9 +32,6 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListItemCell", for: indexPath)
         cell.textLabel?.text = items[indexPath.row].task!
-        
-        
-        
         return cell
     }
     
@@ -56,13 +54,13 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
         
         if segue.identifier == "AddItemSegue" {
         let navigationController = segue.destination as! UINavigationController
-        let addItemTableController = navigationController.topViewController as! AddItemTableTableViewController
+        let addItemTableController = navigationController.topViewController as! AddItemTableViewController
         addItemTableController.delegate = self
             
         } else if segue.identifier == "EidtItemSegue" {
             
             let navigationController = segue.destination as! UINavigationController
-            let addItemTableController = navigationController.topViewController as! AddItemTableTableViewController
+            let addItemTableController = navigationController.topViewController as! AddItemTableViewController
             addItemTableController.delegate = self
             let indexPath = sender as! NSIndexPath
             let item = items[indexPath.row].task!
@@ -70,7 +68,121 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
             addItemTableController.indexPath = indexPath
         }
     }
- 
+ ////////////////////////////////////////
+    func storeCoreData(item : BucketList) {
+        
+        guard let applegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        let manageContext = applegate.persistentContainer.viewContext
+        guard let toDoEntity = NSEntityDescription.entity(forEntityName: "BucketListItem", in: manageContext) else {return}
+        let toDoObject = NSManagedObject.init(entity : toDoEntity , insertInto : manageContext)
+        toDoObject.setValue(item.task, forKey: "task")
+      
+        
+        do {
+            try manageContext.save()
+            print ("-------Save Done----------")
+            
+        } catch {
+            print ("ERROOOOORRR")
+        }
+    }
+    
+    // get core data
+    
+    func getCoreData() -> [BucketList]{
+        var bucketList: [BucketList] = []
+        
+        guard let applegate = UIApplication.shared.delegate as? AppDelegate else {return[]}
+        
+        let manageContext = applegate.persistentContainer.viewContext
+       
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName : "BucketListItem")
+    
+        do {
+            let result = try manageContext.fetch(fetchRequest) as! [NSManagedObject]
+            
+            for managedToDo in result {
+                let title = managedToDo.value(forKey: "task") as! String
+            
+                
+                let newItem = BucketList(task: title)
+                
+                bucketList.append(newItem)
+            }
+            try manageContext.save()
+            print ("------- update Done----------")
+            
+            for i in bucketList{
+                print("\(i.task) ")
+                      
+                      }
+            return bucketList
+            
+        } catch {
+            print ("ERROOOOORRR")
+            return []
+        }
+    }
+
+    // update core data
+    
+    
+    func updateCoreData(item : BucketList , index : Int){
+                  
+         guard let applegate = UIApplication.shared.delegate as? AppDelegate else {return}
+         
+         let manageContext = applegate.persistentContainer.viewContext
+        
+         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName : "BucketListItem")
+         
+         do {
+            
+             let result = try manageContext.fetch(fetchRequest) as! [NSManagedObject]
+             
+             result[index].setValue(item.task, forKey: "task")
+             
+             try manageContext.save()
+             
+             print ("-------Done update----------")
+             
+        
+             print("\n \(item.task) ")
+             
+         } catch {
+             print ("ERROOOOORRR")
+         }
+     }
+     
+    
+    // delete from core data
+    
+    func deleteCoreData(index : Int){
+                  
+         guard let applegate = UIApplication.shared.delegate as? AppDelegate else {return}
+         
+         let manageContext = applegate.persistentContainer.viewContext
+        
+         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName : "BucketListItem")
+         
+         do {
+            
+             let result = try manageContext.fetch(fetchRequest) as! [NSManagedObject]
+             let toDoDelete = result[index]
+            
+             manageContext.delete(toDoDelete)
+             
+             try manageContext.save()
+             
+             print ("-------Done delete----------")
+           
+             
+         } catch {
+             print ("ERROOOOORRR")
+         }
+     }
+     
+/////////////////////////////////////////
+   /*
     func fetchAllItems(){
         let itemRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "BucketListItem")
 
@@ -95,19 +207,20 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
        
 
     }
+    */
 
     
-    func cancelBtn(by controller: AddItemTableTableViewController) {
+    func cancelBtn(by controller: AddItemTableViewController) {
         print ("hidden , cancelBtnPressed")
         dismiss(animated: true, completion: nil)
     }
     
-    func itemSave(by controller: AddItemTableTableViewController , with text : String, at indexPath : NSIndexPath?) {
+    func itemSave(by controller: AddItemTableViewController , with text : String, at indexPath : NSIndexPath?) {
         if let ip = indexPath {
             var item = items[ip.row]
             item.task = text
-            
-            
+            updateCoreData(item: item, index: ip.row)
+            /*
             if managedObjectContext.hasChanges {
                 do {
                     try managedObjectContext.save()
@@ -119,20 +232,18 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
             
             //let thing = NSEntityDescription.insertNewObject(forEntityName: "BucketListItem", into: managedObjectContext) as! BucketListItem
               //  thing.task = text
-            
+            */
         } else {
         print ("text : \(text)")
-            let thing = NSEntityDescription.insertNewObject(forEntityName: "BucketListItem", into: managedObjectContext) as! BucketListItem
+          
+           // let thing = NSEntityDescription.insertNewObject(forEntityName: "BucketListItem", into: managedObjectContext) as! BucketListItem
 
           //  var item = NSEntityDescription.insertNewObject(forEntityName: "BucketListItem", into: managedObjectContext) as! BucketList
-            thing.task = text
+          //  thing.task = text
             let t = BucketList(task : text)
             items.append(t)
-        }
-        do{
-         try  managedObjectContext.save()
-        } catch{
-           print ("\(error)")
+            storeCoreData(item: t)
+    
         }
         tableView.reloadData()
         dismiss(animated: true, completion: nil)

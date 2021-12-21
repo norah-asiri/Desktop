@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddItemTableTableViewController: UITableViewController {
+class AddItemTableViewController: UITableViewController {
     
     var item : String?
     var indexPath : NSIndexPath?
