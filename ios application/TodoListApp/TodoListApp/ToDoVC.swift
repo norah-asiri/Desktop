@@ -26,10 +26,10 @@ class ToDoVC: UITableViewController {
         // Do any additional setup after loading the view.
        print("STAAAAAAART")
        storeToDo(todo: todeTest)
-      // getToDoList = getToDo()
-      // updateToDo(todo: toDoUpdate , index: 0)
-      //  deleteToDo(index: 0)
-        tableView.reloadData()
+       getToDoList = getToDo()
+       updateToDo(todo: toDoUpdate , index: 0)
+       deleteToDo(index: 0)
+       tableView.reloadData()
         
     }
     
@@ -45,7 +45,7 @@ class ToDoVC: UITableViewController {
         
         cell.titleLabel.text = getToDoList[indexPath.row].title
         cell.dateLabel.text = "   \(String(describing: getToDoList[indexPath.row].date))"
-     cell.descriptionLabel.text = getToDoList[indexPath.row].description
+        cell.descriptionLabel.text = getToDoList[indexPath.row].description
      
         // dequeue the cell from our storyboard
         //let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
@@ -79,10 +79,7 @@ class ToDoVC: UITableViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //let destination = segue.destination as! AddVC
-        // destination.titleTextField
-    }
+   
     
     // save to core data
     
@@ -124,7 +121,7 @@ class ToDoVC: UITableViewController {
                 
                 let description = managedToDo.value(forKey: "description") as! String
                 
-                let date = manageContext.value(forKey: "date") as! String
+                let date = managedToDo.value(forKey: "date") as! String
                 
             
                 

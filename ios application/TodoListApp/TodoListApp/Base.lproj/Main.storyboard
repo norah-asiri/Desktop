@@ -11,7 +11,7 @@
         <!--To DoVC-->
         <scene sceneID="VpM-1U-exN">
             <objects>
-                <tableViewController id="ITf-J0-eQL" customClass="ToDoVC" customModule="TodoListApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ToDoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ITf-J0-eQL" customClass="ToDoVC" customModule="TodoListApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="uzG-yU-RfS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +94,6 @@
         <!--AddVC-->
         <scene sceneID="Amf-cl-621">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Aye-2w-qA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="g5M-89-jLu" customClass="AddVC" customModule="TodoListApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WWJ-rx-A7o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -163,6 +162,7 @@
                         <outlet property="titleTextField" destination="8kO-pk-BWU" id="xa9-8N-bTC"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aye-2w-qA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4631.884057971015" y="-204.24107142857142"/>
         </scene>
