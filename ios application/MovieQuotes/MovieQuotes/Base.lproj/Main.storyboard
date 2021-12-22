@@ -65,6 +65,7 @@
                                         <connections>
                                             <outlet property="movieImage" destination="hbW-F4-GI1" id="svP-eZ-jge"/>
                                             <outlet property="movieTitle" destination="d4a-aF-9pd" id="wGo-O5-OVy"/>
+                                            <segue destination="8wT-Oo-Pw8" kind="show" identifier="showDetails" id="Q9h-cT-jmc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -95,13 +96,13 @@
         <!--Show Quotes-->
         <scene sceneID="dHG-41-ocJ">
             <objects>
-                <viewController storyboardIdentifier="ShowQuotes" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8wT-Oo-Pw8" customClass="ShowQuotes" customModule="MovieQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowQuotes" id="8wT-Oo-Pw8" customClass="ShowQuotes" customModule="MovieQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vku-Gj-Se9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yvq-o9-So2">
-                                <rect key="frame" x="50" y="204" width="314" height="34"/>
+                                <rect key="frame" x="50" y="248" width="314" height="34"/>
                                 <accessibility key="accessibilityConfiguration" hint="enter "/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Buu-6b-nTx"/>
@@ -137,6 +138,10 @@
                             <constraint firstItem="yvq-o9-So2" firstAttribute="centerX" secondItem="Vku-Gj-Se9" secondAttribute="centerX" id="xhP-Yw-neh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="btV-0D-l9S"/>
+                    <connections>
+                        <outlet property="quotes" destination="bYv-lm-NkN" id="3Vt-jL-X0B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XvJ-l9-KB6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,7 +17,6 @@
 		84A948E7277237C500923829 /* MovieItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A948E6277237C500923829 /* MovieItem.swift */; };
 		84A948EA277254CD00923829 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 84A948E9277254CD00923829 /* Kingfisher */; };
 		84A948EF2772676E00923829 /* ShowQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A948EE2772676E00923829 /* ShowQuotes.swift */; };
-		84A948F12772696700923829 /* QuotesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A948F02772696700923829 /* QuotesDelegate.swift */; };
 		8E7C7F5B864C9ECF0D0A6634 /* Pods_MovieQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD0EF61EA693B2B2398130C /* Pods_MovieQuotes.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		84A948E4277234ED00923829 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		84A948E6277237C500923829 /* MovieItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItem.swift; sourceTree = "<group>"; };
 		84A948EE2772676E00923829 /* ShowQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowQuotes.swift; sourceTree = "<group>"; };
-		84A948F02772696700923829 /* QuotesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +85,6 @@
 				84A948E6277237C500923829 /* MovieItem.swift */,
 				84A948D627722AC100923829 /* Main.storyboard */,
 				84A948EE2772676E00923829 /* ShowQuotes.swift */,
-				84A948F02772696700923829 /* QuotesDelegate.swift */,
 				84A948E4277234ED00923829 /* MovieCell.swift */,
 				84A948D927722AC200923829 /* Assets.xcassets */,
 				84A948DB27722AC200923829 /* LaunchScreen.storyboard */,
@@ -229,7 +226,6 @@
 				84A948E7277237C500923829 /* MovieItem.swift in Sources */,
 				84A948D527722AC100923829 /* ViewController.swift in Sources */,
 				84A948E5277234ED00923829 /* MovieCell.swift in Sources */,
-				84A948F12772696700923829 /* QuotesDelegate.swift in Sources */,
 				84A948EF2772676E00923829 /* ShowQuotes.swift in Sources */,
 				84A948D127722AC100923829 /* AppDelegate.swift in Sources */,
 				84A948D327722AC100923829 /* SceneDelegate.swift in Sources */,

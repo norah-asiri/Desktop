@@ -13,13 +13,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var MovieCollectionView: UICollectionView!
     
-    var movieDectionary : [MovieItem] = [MovieItem(title: "Gone With the Wind", imageURL: URL(string: "https://www.infoplease.com/sites/infoplease.com/files/inline-images/rhettbutler.jpg")!),
-      MovieItem(title:"Taxi Driver", imageURL: URL(string: "https://www.infoplease.com/sites/infoplease.com/files/inline-images/taxidriver-min.png")!),
-     MovieItem(title:"Silence of the Lambs",imageURL: URL(string: "https://www.infoplease.com/sites/infoplease.com/files/inline-images/silence_of_the_lambs-min.png")!),
-      MovieItem(title:"Casablanca", imageURL:URL(string: "https//www.infoplease.com/sites/infoplease.com/files/inline-images/round-up-the-usual-suspects--min.png")!),
-      MovieItem(title: "Titanic",imageURL:URL(string: "https://www.infoplease.com/sites/infoplease.com/files/inline-images/sei_51177181-66f6-min.png")!)
-                                    
-    ]
+    var movieList : [MovieItem] = [MovieItem(title: "Gone With the Wind", imageURL: URL(string: "https://www.infoplease.com/sites/infoplease.com/files/inline-images/rhettbutler.jpg")!,qouts: ["Frankly, my dear, I don't give a damn.","I'm going to make him an offer he can't refuse."]),
+  MovieItem(title:"Taxi Driver", imageURL: URL(string: "https://www.infoplease.com/sites/infoplease.com/files/inline-images/taxidriver-min.png")!,qouts: ["You talking to me?", "What we've got here is failure to communicate."]),
+    MovieItem(title:"Silence of the Lambs",imageURL: URL(string: "https://www.infoplease.com/sites/infoplease.com/files/inline-images/silence_of_the_lambs-min.png")!,qouts:["There's no place like home." ,"After all, tomorrow is another day!"]),
+    MovieItem(title: "Titanic",imageURL:URL(string: "https://www.infoplease.com/sites/infoplease.com/files/inline-images/sei_51177181-66f6-min.png")!,qouts: ["I'm king of the world!","Just keep swimming" ,"I drink your milkshake"]) ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +28,13 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource , UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movieDectionary.count
+        return movieList.count
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = MovieCollectionView.dequeueReusableCell(withReuseIdentifier: String(describing: MovieCell.self), for: indexPath) as! MovieCell
-        let url = movieDectionary[indexPath.row].imageURL
+        let url = movieList[indexPath.row].imageURL
         
         print (url)
         
@@ -45,7 +42,7 @@ extension ViewController: UICollectionViewDataSource , UICollectionViewDelegate 
         
       //  print (urlData)
         
-        cell.movieTitle.text = movieDectionary[indexPath.row].title
+        cell.movieTitle.text = movieList[indexPath.row].title
     
 //    cell.movieImage.image = UIImage(data: url//!)
         
@@ -60,6 +57,15 @@ extension ViewController: UICollectionViewDataSource , UICollectionViewDelegate 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ShowQuotes") as? ShowQuotes
+        if let view = vc {
+        let numOfQuot = movieList[indexPath.row].qouts.count
+       // let random = Int.random(in: 0..<numOfQuot-1)
+            view.movieDetails.qouts = movieList[indexPath.row].qouts
+            
+            present(view, animated: true, completion: nil)
+        }
     
     }
     

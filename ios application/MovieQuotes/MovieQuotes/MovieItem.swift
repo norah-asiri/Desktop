@@ -8,7 +8,7 @@
 import UIKit
 struct MovieItem {
     var title : String
-    var imageURL : URL
-    var qouts : [String : String]?
+    var imageURL : URL?
+    var qouts : [String]
    
 }
