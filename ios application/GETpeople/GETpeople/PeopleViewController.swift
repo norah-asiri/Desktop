@@ -48,7 +48,7 @@ class PeopleViewController: UIViewController {
             
             let dict = try JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
              print (dict)
-             if let results = dic["result"] as? [[String : Any]]{
+             if let results = dict["result"] as? [[String : Any]]{
                  for result in results {
                     parsePeopleInfo(dict: result)
         }

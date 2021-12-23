@@ -13,6 +13,7 @@
 		84A949462773C02A00923829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A949442773C02A00923829 /* Main.storyboard */; };
 		84A949482773C02B00923829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A949472773C02B00923829 /* Assets.xcassets */; };
 		84A9494B2773C02B00923829 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A949492773C02B00923829 /* LaunchScreen.storyboard */; };
+		84A949572775017300923829 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A949562775017300923829 /* movies.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		84A949472773C02B00923829 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A9494A2773C02B00923829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84A9494C2773C02B00923829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A949562775017300923829 /* movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				84A9493E2773C02A00923829 /* AppDelegate.swift */,
 				84A949402773C02A00923829 /* SceneDelegate.swift */,
 				84A949422773C02A00923829 /* ViewController.swift */,
+				84A949562775017300923829 /* movies.json */,
 				84A949442773C02A00923829 /* Main.storyboard */,
 				84A949472773C02B00923829 /* Assets.xcassets */,
 				84A949492773C02B00923829 /* LaunchScreen.storyboard */,
@@ -127,6 +130,7 @@
 			files = (
 				84A9494B2773C02B00923829 /* LaunchScreen.storyboard in Resources */,
 				84A949482773C02B00923829 /* Assets.xcassets in Resources */,
+				84A949572775017300923829 /* movies.json in Resources */,
 				84A949462773C02A00923829 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +298,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -322,6 +328,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
