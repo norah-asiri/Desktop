@@ -21,6 +21,7 @@
 		847910B7276CBEC600955507 /* BucketListCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 847910B5276CBEC600955507 /* BucketListCD.xcdatamodeld */; };
 		847910B9276CCEB300955507 /* BucketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847910B8276CCEB300955507 /* BucketList.swift */; };
 		84A94980277A586F00923829 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9497F277A586F00923829 /* TaskModel.swift */; };
+		84A94983277A677500923829 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 84A94982277A677500923829 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A94983277A677500923829 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +160,9 @@
 			dependencies = (
 			);
 			name = "Bucket List crUD";
+			packageProductDependencies = (
+				84A94982277A677500923829 /* Alamofire */,
+			);
 			productName = "Bucket List crUD";
 			productReference = 84790FC2276BC1D100955507 /* Bucket List crUD.app */;
 			productType = "com.apple.product-type.application";
@@ -230,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 84790FB9276BC1D000955507;
+			packageReferences = (
+				84A94981277A677500923829 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 84790FC3276BC1D100955507 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -638,6 +646,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84A94981277A677500923829 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84A94982277A677500923829 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84A94981277A677500923829 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		847910B5276CBEC600955507 /* BucketListCD.xcdatamodeld */ = {
