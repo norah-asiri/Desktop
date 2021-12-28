@@ -12,26 +12,35 @@ import Alamofire
 class BucketListViewController: UITableViewController , AddItemTableViewControllerDelegate {
 
     var items : [BucketList] = []
-    
    // let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("View Controller is loaded")
-     
-        AF.request("https://saudibucketlistapi.herokuapp.com/tasks/?format=json").responseDecodable(of: [BucketList].self){
-            response in
-            print (response)
-            guard let tasks = response.value else {return}
-             //   super.viewDidLoad()
-            print (tasks)
-            self.items = tasks
-            self.tableView.reloadData()
-            
+        print("loaded")
+        items = getCoreData()
+        tableView.reloadData()
+        
+                TaskModel.getAllTasks() {
+                    data, response, error in
+                    do {
+                        if let tasks = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSArray {
+                            print(tasks)
+                            
+                            for i in tasks{
+                                let b = (i as AnyObject).value(forKey: "id")
+                            let b1 = BucketList(task: "\(b)")
+                            self.items.append(b1)
+                            }
+                            
+                        }
+                    } catch {
+                        print("Something went wrong")
+                    }
+                }
+                super.viewDidLoad()
+        self.tableView.reloadData()
         }
-      //tableView.reloadData()
-}
 
     
     override func didReceiveMemoryWarning() {
@@ -45,7 +54,7 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListItemCell", for: indexPath)
-        cell.textLabel?.text = items[indexPath.row].objective
+        cell.textLabel?.text = items[indexPath.row].task!
         return cell
     }
     
@@ -78,7 +87,7 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
             let addItemTableController = navigationController.topViewController as! AddItemTableViewController
             addItemTableController.delegate = self
             let indexPath = sender as! NSIndexPath
-            let item = items[indexPath.row].objective
+            let item = items[indexPath.row].task!
             addItemTableController.item = item
             addItemTableController.indexPath = indexPath
         }
@@ -90,7 +99,7 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
         let manageContext = applegate.persistentContainer.viewContext
         guard let itemEntity = NSEntityDescription.entity(forEntityName: "BucketListItem", in: manageContext) else {return}
         let toDoObject = NSManagedObject.init(entity : itemEntity , insertInto : manageContext)
-        toDoObject.setValue(item.objective, forKey: "task")
+        toDoObject.setValue(item.task, forKey: "task")
       
         
         do {
@@ -118,13 +127,9 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
             
             for managedToDo in result {
                 let title = managedToDo.value(forKey: "task") as! String
-//
-//                let formatter = DateFormatter()
-//                formatter.dateFormat = "yyyy/MM/dd HH:mm"
-//                let someDateTime = formatter.date(from: "2016/10/08 22:31")!
-//
+            
                 
-                let newItem = BucketList(id: 1 , objective: "Nothing", created_at: "00000")
+                let newItem = BucketList(task: title)
                 
                 bucketList.append(newItem)
             }
@@ -132,7 +137,7 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
             print ("------- update Done----------")
             
             for i in bucketList{
-                print("\(i.objective) ")
+                print("\(i.task) ")
                       
                       }
             return bucketList
@@ -158,14 +163,14 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
             
              let result = try manageContext.fetch(fetchRequest) as! [NSManagedObject]
              
-             result[index].setValue(item.objective, forKey: "task")
+             result[index].setValue(item.task, forKey: "task")
              
              try manageContext.save()
              
              print ("-------Done update----------")
              
         
-             print("\n \(item.objective) ")
+             print("\n \(item.task) ")
              
          } catch {
              print ("ERROOOOORRR")
@@ -237,7 +242,7 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
     func itemSave(by controller: AddItemTableViewController , with text : String, at indexPath : NSIndexPath?) {
         if let ip = indexPath {
             var item = items[ip.row]
-            item.objective = text
+            item.task = text
             updateCoreData(item: item, index: ip.row)
             
             /*
@@ -260,11 +265,7 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
 
           //  var item = NSEntityDescription.insertNewObject(forEntityName: "BucketListItem", into: managedObjectContext) as! BucketList
           //  thing.task = text
-//            let formatter = DateFormatter()
-//            formatter.dateFormat = "yyyy/MM/dd HH:mm"
-//            let someDateTime = formatter.date(from: "2016/10/08 22:31")!
-            
-            let t = BucketList (id: 0, objective: "St", created_at: "00000")
+            let t = BucketList(task : text)
            // items.append(t)
             storeCoreData(item: t)
     
@@ -275,5 +276,26 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
         
     }
 }
+///////////////////////////////////////////////////////////////////////////////////////////////
+///
+///
+///
+///
+///////
 
+//
+//  TaskModel.swift
+//  Bucket List crUD
+//
+//  Created by admin on 27/12/2021.
+//
 
+import Foundation
+class TaskModel {
+    static func getAllTasks(completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
+        let url = URL(string: "https://saudibucketlistapi.herokuapp.com/tasks/")
+        let session = URLSession.shared
+        let task = session.dataTask(with: url!, completionHandler: completionHandler)
+        task.resume()
+    }
+}

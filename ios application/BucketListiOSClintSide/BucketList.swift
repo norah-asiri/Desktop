@@ -7,9 +7,11 @@
 
 import UIKit
 
-struct BucketList{
-    
-    var task : String? = nil
+struct BucketList : Decodable {
+
+    var id: Int
+    var objective : String
+    var created_at : String
     
     
 }
