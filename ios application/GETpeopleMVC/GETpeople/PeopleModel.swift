@@ -11,20 +11,7 @@ struct People : Codable {
     let count : Int
     let results : [Result]
     
-//    init?(dict:[String:Any]) {
-//        guard let name = dict["name"] as? String,  // Important
-//              let birthYear = dict["birth_year"] as? String,
-//              let films = dict["films"] as? [String],
-//              let species = dict["species"] as? [String] else {
-//                  print("parsing failed")
-//                  return nil
-//              }
-//
-//        self.name = name
-//        self.birthYear = birthYear
-//        self.films = films
-//        self.species = species
-//    }
+
 }
 
 struct Result : Codable {
