@@ -20,11 +20,11 @@ class ViewController: UIViewController {
                 data, response, error in
                     do {
                         // Try converting the JSON object to "Foundation Types" (NSDictionary, NSArray, NSString, etc.)
-                        if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
-                            if let results = jsonResult["results"] as? NSArray {
-                                for person in results {
-                                    let personDict = person as! NSDictionary
-                                    self.finalResult.append(personDict["name"]! as! String)
+         if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+         if let results = jsonResult["results"] as? NSArray {
+        for person in results {
+       let personDict = person as! NSDictionary
+                                    self.finalResult.append(personDict["name"])
                                 }
                             }
                         }

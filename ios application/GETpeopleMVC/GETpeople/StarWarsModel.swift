@@ -2,7 +2,7 @@
 //  StarWarsModel.swift
 //  GETpeople
 //
-//  Created by admin on 23/12/2021.
+//  Created by admin on 22/12/2021.
 //
 
 import Foundation

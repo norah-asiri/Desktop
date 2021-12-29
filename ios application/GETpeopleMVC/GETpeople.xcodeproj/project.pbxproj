@@ -13,8 +13,10 @@
 		84A949262773BF8E00923829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A949242773BF8E00923829 /* Main.storyboard */; };
 		84A949282773BF8F00923829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A949272773BF8F00923829 /* Assets.xcassets */; };
 		84A9492B2773BF8F00923829 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A949292773BF8F00923829 /* LaunchScreen.storyboard */; };
-		84A949532773E9CA00923829 /* People.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A949522773E9CA00923829 /* People.json */; };
 		84A949592775062300923829 /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A949582775062300923829 /* StarWarsModel.swift */; };
+		84A949A8277C102600923829 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 84A949A7277C102600923829 /* Kingfisher */; };
+		84A949AC277C162F00923829 /* PeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A949AB277C162F00923829 /* PeopleModel.swift */; };
+		84A949AE277C172D00923829 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A949AD277C172D00923829 /* ApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +28,9 @@
 		84A949272773BF8F00923829 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A9492A2773BF8F00923829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84A9492C2773BF8F00923829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84A949522773E9CA00923829 /* People.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = People.json; sourceTree = "<group>"; };
 		84A949582775062300923829 /* StarWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
+		84A949AB277C162F00923829 /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
+		84A949AD277C172D00923829 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A949A8277C102600923829 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +67,8 @@
 				84A9491E2773BF8E00923829 /* AppDelegate.swift */,
 				84A949202773BF8E00923829 /* SceneDelegate.swift */,
 				84A949222773BF8E00923829 /* PeopleViewController.swift */,
-				84A949522773E9CA00923829 /* People.json */,
+				84A949AB277C162F00923829 /* PeopleModel.swift */,
+				84A949AD277C172D00923829 /* ApiManager.swift */,
 				84A949242773BF8E00923829 /* Main.storyboard */,
 				84A949582775062300923829 /* StarWarsModel.swift */,
 				84A949272773BF8F00923829 /* Assets.xcassets */,
@@ -89,6 +94,9 @@
 			dependencies = (
 			);
 			name = GETpeople;
+			packageProductDependencies = (
+				84A949A7277C102600923829 /* Kingfisher */,
+			);
 			productName = GETpeople;
 			productReference = 84A9491B2773BF8E00923829 /* GETpeople.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 84A949122773BF8E00923829;
+			packageReferences = (
+				84A949A6277C102600923829 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 84A9491C2773BF8E00923829 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,7 +142,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84A949532773E9CA00923829 /* People.json in Resources */,
 				84A9492B2773BF8F00923829 /* LaunchScreen.storyboard in Resources */,
 				84A949282773BF8F00923829 /* Assets.xcassets in Resources */,
 				84A949262773BF8E00923829 /* Main.storyboard in Resources */,
@@ -145,9 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A949AC277C162F00923829 /* PeopleModel.swift in Sources */,
 				84A949232773BF8E00923829 /* PeopleViewController.swift in Sources */,
 				84A9491F2773BF8E00923829 /* AppDelegate.swift in Sources */,
 				84A949592775062300923829 /* StarWarsModel.swift in Sources */,
+				84A949AE277C172D00923829 /* ApiManager.swift in Sources */,
 				84A949212773BF8E00923829 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +380,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84A949A6277C102600923829 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84A949A7277C102600923829 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84A949A6277C102600923829 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84A949132773BF8E00923829 /* Project object */;
 }
