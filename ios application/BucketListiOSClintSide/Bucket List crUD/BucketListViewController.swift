@@ -19,7 +19,11 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("View Controller is loaded")
-     
+        
+     // ----------------------------------------------
+     // MARK: GET Request
+//        BucketListAlamofire.getRequest(url : "https://saudibucketlistapi.herokuapp.com/tasks/?format=json" , rType : "get", bucketList: nil)
+        
         AF.request("https://saudibucketlistapi.herokuapp.com/tasks/?format=json").responseDecodable(of: [BucketList].self){
             response in
             print (response)
@@ -30,9 +34,11 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
             self.tableView.reloadData()
             
         }
-      //tableView.reloadData()
-}
-
+        
+        //-------------------------------------
+        
+    
+    }
     
     override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -43,12 +49,13 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListItemCell", for: indexPath)
         cell.textLabel?.text = items[indexPath.row].objective
         return cell
     }
     
+    // ---------------------------------------------
+    //MARK: Add PUT Request here
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print ("Select item at index \(indexPath.row)")
     }
@@ -58,12 +65,16 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
         
     }
     
+    //-----------------------------------------------
+    // MARK: ADD DELETE Request here
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        items.remove(at: indexPath.row)
+       // items.remove(at: indexPath.row)
         deleteCoreData(index: indexPath.row)
-        tableView.reloadData()
+        
     
-    }
+
+}
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -74,132 +85,214 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
             
         } else if segue.identifier == "EidtItemSegue" {
             
+
             let navigationController = segue.destination as! UINavigationController
             let addItemTableController = navigationController.topViewController as! AddItemTableViewController
             addItemTableController.delegate = self
             let indexPath = sender as! NSIndexPath
             let item = items[indexPath.row].objective
             addItemTableController.item = item
-            addItemTableController.indexPath = indexPath
-        }
+            //let update = items[indexPath.row]
+            //addItemTableController.update = update
+//                AF.request("https://saudibucketlistapi.herokuapp.com/tasks/?format=json",
+//                           method: .put,
+//                           parameters: add).responseDecodable(of: BucketList.self) { response in
+//                    guard let response = response.value else { return }
+//                    let update = response
+//                    print(update) }
+//
+//
+//           addItemTableController.indexPath = indexPath
+////            addItemTableController.id =
+
     }
- ////////////////////////////////////////
-    func storeCoreData(item : BucketList) {
-        
-        guard let applegate = UIApplication.shared.delegate as? AppDelegate else {return}
-        let manageContext = applegate.persistentContainer.viewContext
-        guard let itemEntity = NSEntityDescription.entity(forEntityName: "BucketListItem", in: manageContext) else {return}
-        let toDoObject = NSManagedObject.init(entity : itemEntity , insertInto : manageContext)
-        toDoObject.setValue(item.objective, forKey: "task")
-      
-        
-        do {
-            try manageContext.save()
-            print ("-------Save Done----------")
-            
-        } catch {
-            print ("ERROOOOORRR")
-        }
     }
+ //////////////////////////////////////////
+    /////>>>>>>>>>>>>>>>>>>>>>>
+   func storeCoreData(item : BucketList) {
+       
+       //MARK: - POST Api with Alamofire - True
+  //     func getMoviesWithAlamofire(){
+       let add :[String : Any] = [ "id" : item.id , "objective" : item.objective , "created_at": item.created_at]
+           AF.request("https://saudibucketlistapi.herokuapp.com/tasks/?format=json",
+                      method: .post,
+                      parameters: add).responseDecodable(of: BucketList.self) { response in
+               guard let movieResponse = response.value else { return }
+               let new = movieResponse
+               print(new)
+               
+           }
+//
+//        guard let applegate = UIApplication.shared.delegate as? AppDelegate else {return}
+//        let manageContext = applegate.persistentContainer.viewContext
+//        guard let itemEntity = NSEntityDescription.entity(forEntityName: "BucketListItem", in: manageContext) else {return}
+//        let toDoObject = NSManagedObject.init(entity : itemEntity , insertInto : manageContext)
+//        toDoObject.setValue(item.objective, forKey: "task")
+//
+//
+//        do {
+//            try manageContext.save()
+//            print ("-------Save Done----------")
+//
+//        } catch {
+//            print ("ERROOOOORRR")
+//        }
+    }//>>>>>>>>>>>>>>>>>>>>
     
     // get core data
-    
-    func getCoreData() -> [BucketList]{
-        var bucketList: [BucketList] = []
+//    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    func getCoreData(){
         
-        guard let applegate = UIApplication.shared.delegate as? AppDelegate else {return[]}
-        
-        let manageContext = applegate.persistentContainer.viewContext
-       
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName : "BucketListItem")
+        // MARK: GET Request --> True
+   //        BucketListAlamofire.getRequest(url : "https://saudibucketlistapi.herokuapp.com/tasks/?format=json" , rType : "get", bucketList: nil)
+           
+           AF.request("https://saudibucketlistapi.herokuapp.com/tasks/?format=json").responseDecodable(of: [BucketList].self){
+               response in
+               print (response)
+               guard let tasks = response.value else {return}
+                //   super.viewDidLoad()
+               print (tasks)
+               self.items = tasks
+               self.tableView.reloadData()
+               
+
     
-        do {
-            let result = try manageContext.fetch(fetchRequest) as! [NSManagedObject]
-            
-            for managedToDo in result {
-                let title = managedToDo.value(forKey: "task") as! String
+//        var bucketList: [BucketList] = []
 //
+//        guard let applegate = UIApplication.shared.delegate as? AppDelegate else {return[]}
+//
+//        let manageContext = applegate.persistentContainer.viewContext
+//
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName : "BucketListItem")
+//
+//        do {
+//            let result = try manageContext.fetch(fetchRequest) as! [NSManagedObject]
+//
+//            for managedToDo in result {
+//                let title = managedToDo.value(forKey: "task") as! String
+
 //                let formatter = DateFormatter()
 //                formatter.dateFormat = "yyyy/MM/dd HH:mm"
 //                let someDateTime = formatter.date(from: "2016/10/08 22:31")!
 //
-                
-                let newItem = BucketList(id: 1 , objective: "Nothing", created_at: "00000")
-                
-                bucketList.append(newItem)
-            }
-            try manageContext.save()
-            print ("------- update Done----------")
-            
-            for i in bucketList{
-                print("\(i.objective) ")
-                      
-                      }
-            return bucketList
-            
-        } catch {
-            print ("ERROOOOORRR")
-            return []
-        }
+//
+//                let newItem = BucketList(id: 1 , objective: "Nothing", created_at: "00000")
+//
+//                bucketList.append(newItem)
+//            }
+//            try manageContext.save()
+//            print ("------- update Done----------")
+//
+//            for i in bucketList{
+//                print("\(i.objective) ")
+//
+//                      }
+//            return bucketList
+//
+//        } catch {
+//            print ("ERROOOOORRR")
+//            return []
+//        }
+//    }
+           }
     }
-
+        
+    //// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    ///
     // update core data
     
-    
-    func updateCoreData(item : BucketList , index : Int){
-                  
-         guard let applegate = UIApplication.shared.delegate as? AppDelegate else {return}
-         
-         let manageContext = applegate.persistentContainer.viewContext
+//  //>>>>>>>>>>>>>>>>>
+    func updateCoreData(item : BucketList){
         
-         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName : "BucketListItem")
-         
-         do {
-            
-             let result = try manageContext.fetch(fetchRequest) as! [NSManagedObject]
-             
-             result[index].setValue(item.objective, forKey: "task")
-             
-             try manageContext.save()
-             
-             print ("-------Done update----------")
-             
+        let del : [String : Any] = ["id": item.id , "objective": item.objective, "created_at": item.created_at]
         
-             print("\n \(item.objective) ")
-             
-         } catch {
-             print ("ERROOOOORRR")
-         }
-     }
-     
-    
+            AF.request("https://saudibucketlistapi.herokuapp.com/tasks/?format=json",
+                       method: .put ,
+                       parameters: del).responseDecodable(of: BucketList.self) { response in
+                guard let response = response.value else { return }
+                let deleted = response
+                print(deleted)
+                self.tableView.reloadData()
+//
+//         guard let applegate = UIApplication.shared.delegate as? AppDelegate else {return}
+//
+//         let manageContext = applegate.persistentContainer.viewContext
+//
+//         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName : "BucketListItem")
+//
+//         do {
+//
+//             let result = try manageContext.fetch(fetchRequest) as! [NSManagedObject]
+//
+//             result[index].setValue(item.objective, forKey: "task")
+//
+//             try manageContext.save()
+//
+//             print ("-------Done update----------")
+//
+//
+//             print("\n \(item.objective) ")
+//
+//         } catch {
+//             print ("ERROOOOORRR")
+//         }
+//     }
+//
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+            }
+    }
+                
     // delete from core data
-    
-    func deleteCoreData(index : Int){
-                  
-         guard let applegate = UIApplication.shared.delegate as? AppDelegate else {return}
-         
-         let manageContext = applegate.persistentContainer.viewContext
+
+//    //>>>>>>>>>>>>>>>>>>>>>>>
+   func deleteCoreData(index : Int){
+       
+       let del : [String : Any] = ["id": items[index].id , "objective": items[index].objective, "created_at": items[index].created_at]
+       
+           AF.request("https://saudibucketlistapi.herokuapp.com/tasks/?format=json",
+                      method: .delete ,
+                      parameters: del).responseDecodable(of: BucketList.self) { response in
+               guard let response = response.value else { return }
+               let deleted = response
+               print(deleted)
+               self.tableView.reloadData()
+           }
+//
+//         guard let applegate = UIApplication.shared.delegate as? AppDelegate else {return}
+//
+//         let manageContext = applegate.persistentContainer.viewContext
+//
+//         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName : "BucketListItem")
+//
+//         do {
+//
+//             let result = try manageContext.fetch(fetchRequest) as! [NSManagedObject]
+//             let toDoDelete = result[index]
+//
+//             manageContext.delete(toDoDelete)
+//
+//             try manageContext.save()
+//
+//             print ("-------Done delete----------")
+//
+//
+//         } catch {
+//             print ("ERROOOOORRR")
+//         }
+//
+//        let del = ["id" : ""  ]
+//            AF.request("https://saudibucketlistapi.herokuapp.com/tasks/?format=json",
+//                       method: .delete,
+//                       parameters: del).responseDecodable(of: BucketList.self) { response in
+//                guard let movieResponse = response.value else { return }
+//                let deleted = movieResponse
+//                print(deleted)
+//
+//            }
+//
+//     }>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+   }
         
-         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName : "BucketListItem")
-         
-         do {
-            
-             let result = try manageContext.fetch(fetchRequest) as! [NSManagedObject]
-             let toDoDelete = result[index]
-            
-             manageContext.delete(toDoDelete)
-             
-             try manageContext.save()
-             
-             print ("-------Done delete----------")
-           
-             
-         } catch {
-             print ("ERROOOOORRR")
-         }
-     }
-     
 /////////////////////////////////////////
    /*
     func fetchAllItems(){
@@ -238,7 +331,9 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
         if let ip = indexPath {
             var item = items[ip.row]
             item.objective = text
-            updateCoreData(item: item, index: ip.row)
+            
+            
+            updateCoreData(item: item)
             
             /*
             if managedObjectContext.hasChanges {
@@ -264,16 +359,17 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
 //            formatter.dateFormat = "yyyy/MM/dd HH:mm"
 //            let someDateTime = formatter.date(from: "2016/10/08 22:31")!
             
-            let t = BucketList (id: 0, objective: "St", created_at: "00000")
-           // items.append(t)
-            storeCoreData(item: t)
-    
+//            let t = BucketList (id: 0, objective: "St", created_at: "00000")
+//           // items.append(t)
+//            storeCoreData(item: t)
+//
         }
-        items = getCoreData()
+        getCoreData()
         tableView.reloadData()
         dismiss(animated: true, completion: nil)
         
     }
 }
+
 
 
