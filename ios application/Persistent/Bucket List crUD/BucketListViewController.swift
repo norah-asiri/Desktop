@@ -18,6 +18,7 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
         // Do any additional setup after loading the view.
         print("loaded")
         items = getCoreData()
+        
         tableView.reloadData()
     }
     override func didReceiveMemoryWarning() {
@@ -76,6 +77,8 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
         let manageContext = applegate.persistentContainer.viewContext
         guard let itemEntity = NSEntityDescription.entity(forEntityName: "BucketListItem", in: manageContext) else {return}
         let toDoObject = NSManagedObject.init(entity : itemEntity , insertInto : manageContext)
+        
+        
         toDoObject.setValue(item.task, forKey: "task")
       
         
@@ -84,7 +87,7 @@ class BucketListViewController: UITableViewController , AddItemTableViewControll
             print ("-------Save Done----------")
             
         } catch {
-            print ("ERROOOOORRR")
+            print ("......................ERROOOOORRR \(error)")
         }
     }
     
