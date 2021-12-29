@@ -84,7 +84,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ENg-Vb-6xh">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="Yzn-MP-Se9"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="Yzn-MP-Se9">
+                            <connections>
+                                <action selector="addAlert:" destination="BYZ-38-t0r" id="Q0B-C2-f8x"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
