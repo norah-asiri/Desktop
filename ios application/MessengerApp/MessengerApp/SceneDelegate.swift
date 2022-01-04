@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  MessengerApplication
+//  MessengerApp
 //
 //  Created by administrator on 04/01/2022.
 //
