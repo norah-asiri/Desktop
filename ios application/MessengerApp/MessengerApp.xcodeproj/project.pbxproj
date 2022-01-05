@@ -18,6 +18,11 @@
 		C36B1A5127847978000D336C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C36B1A5027847978000D336C /* FirebaseAuth */; };
 		C36B1A5327847978000D336C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C36B1A5227847978000D336C /* FirebaseDatabase */; };
 		C36B1A5527847978000D336C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C36B1A5427847978000D336C /* FirebaseStorage */; };
+		C36B1A5727847DCC000D336C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B1A5627847DCC000D336C /* LoginViewController.swift */; };
+		C36B1A5927847E0A000D336C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B1A5827847E0A000D336C /* RegisterViewController.swift */; };
+		C36B1A5B27847E2F000D336C /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B1A5A27847E2F000D336C /* NewConversationViewController.swift */; };
+		C36B1A5D27847E49000D336C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B1A5C27847E49000D336C /* ProfileViewController.swift */; };
+		C36B1A5F278480CC000D336C /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36B1A5E278480CB000D336C /* ConversationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		C36B1A432784778D000D336C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C36B1A452784778D000D336C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C36B1A4B278478E3000D336C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C36B1A5627847DCC000D336C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C36B1A5827847E0A000D336C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C36B1A5A27847E2F000D336C /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
+		C36B1A5C27847E49000D336C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C36B1A5E278480CB000D336C /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,11 @@
 				C36B1A422784778D000D336C /* LaunchScreen.storyboard */,
 				C36B1A452784778D000D336C /* Info.plist */,
 				C36B1A4B278478E3000D336C /* GoogleService-Info.plist */,
+				C36B1A5627847DCC000D336C /* LoginViewController.swift */,
+				C36B1A5827847E0A000D336C /* RegisterViewController.swift */,
+				C36B1A5A27847E2F000D336C /* NewConversationViewController.swift */,
+				C36B1A5C27847E49000D336C /* ProfileViewController.swift */,
+				C36B1A5E278480CB000D336C /* ConversationsViewController.swift */,
 			);
 			path = MessengerApp;
 			sourceTree = "<group>";
@@ -159,7 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36B1A5B27847E2F000D336C /* NewConversationViewController.swift in Sources */,
+				C36B1A5727847DCC000D336C /* LoginViewController.swift in Sources */,
+				C36B1A5927847E0A000D336C /* RegisterViewController.swift in Sources */,
+				C36B1A5F278480CC000D336C /* ConversationsViewController.swift in Sources */,
 				C36B1A3C2784778B000D336C /* ViewController.swift in Sources */,
+				C36B1A5D27847E49000D336C /* ProfileViewController.swift in Sources */,
 				C36B1A382784778B000D336C /* AppDelegate.swift in Sources */,
 				C36B1A3A2784778B000D336C /* SceneDelegate.swift in Sources */,
 			);
