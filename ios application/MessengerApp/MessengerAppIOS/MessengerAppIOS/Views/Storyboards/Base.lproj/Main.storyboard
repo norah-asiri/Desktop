@@ -65,6 +65,10 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Log In">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logInBtn:" destination="qLB-Qm-Gri" eventType="touchUpInside" id="6c1-r6-0tb"/>
+                                    <action selector="logInBtn:" destination="Uxi-p2-dzi" eventType="touchUpInside" id="CN1-oj-CTB"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="tl4-9P-CoD">
                                 <rect key="frame" x="26" y="595" width="61" height="48"/>
@@ -114,8 +118,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="email" destination="GTt-kd-6JF" id="qZy-QL-av2"/>
+                        <outlet property="password" destination="QAb-fN-UO6" id="t9p-QQ-Sap"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UgO-I4-5R3" sceneMemberID="firstResponder"/>
+                <exit id="Uxi-p2-dzi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2749.275362318841" y="78.348214285714278"/>
         </scene>
@@ -162,6 +171,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Register">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signUpBtn:" destination="1r5-fF-Cec" eventType="touchUpInside" id="Oq2-yE-SoV"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0K7-NL-C3O" customClass="R">
                                 <rect key="frame" x="135" y="138.5" width="144" height="134"/>
@@ -204,7 +216,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="hYq-HH-ucQ"/>
                     <connections>
+                        <outlet property="email" destination="PmW-uc-8Un" id="0CD-F3-w52"/>
+                        <outlet property="firstName" destination="yug-7g-Zug" id="vMb-cn-zEU"/>
                         <outlet property="imageView" destination="0K7-NL-C3O" id="Ji1-TU-f93"/>
+                        <outlet property="lastName" destination="pf2-UW-PEi" id="9wH-ov-3SX"/>
+                        <outlet property="password" destination="1ql-4V-UbP" id="uWK-Xd-H7B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8W-2c-4Dl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
