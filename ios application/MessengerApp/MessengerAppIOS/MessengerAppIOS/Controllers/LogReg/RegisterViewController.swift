@@ -6,29 +6,51 @@
 //
 
 import UIKit
-import Firebase
+import Firestore
 
 class RegisterViewController: UIViewController {
     
+   // var db = Firebas ()
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var lastName: UITextField!
+    let db = Firestore.firestore()
     
     @IBAction func signUpBtn(_ sender: Any) {
-        // SINGUP
-           // Firebase Login / check to see if email is taken
-           // try to create an account
+//         SINGUP
+//            Firebase Login / check to see if email is taken
+//            try to create an account
      Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: { authResult , error  in
                guard let result = authResult, error == nil else {
                    print("Error creating user")
+
                    return
                }
-               let user = result.user
-               print("Created User: \(user)")
-           })
+               let newUser = result.user
+
+               print("Created User: \(newUser)")
+           
+       let user = Auth.auth().currentUser
+        // Add a new document with a generated ID
+        var ref: DocumentReference? = nil
+        ref = db.collection("Users").addDocument(data: [
+            "firstName": firstName.text!,
+            "lastName": lastName.text!,
+            //let uid = user.uid
+            "userID" : user?.uid
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+     })
     }
+                                                
+    
     
    
     

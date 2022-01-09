@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController {
+    // ----------| LOGIN CLASS |--------------
 
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var email: UITextField!
@@ -16,13 +17,16 @@ class ViewController: UIViewController {
     @IBAction func logInBtn(_ sender: UIButton) {
     
     // LOGIN  Firebase Login
-        Auth.auth().signIn(withEmail: email.text!, password: password.text!, completion: { authResult, error in
-       guard let result = authResult, error == nil else {
-           print("Failed to log in user with email \(self.email.text!)")
-           return
-       }
-       let user = result.user
-       print("logged in user: \(user)")
+        Auth.auth().signIn(withEmail:  email.text!, password: password.text! , completion:{ [weak self] authResult, error in
+            guard let strongSelf = self else { return }
+            guard let result = authResult, error == nil else {
+                print("Failed to log in user with email \(self!.email.text!)")
+                return
+            }
+            let user = result.user
+            print("logged in user: \(user)")
+            // if this succeeds, dismiss
+            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
    })
     }
     
